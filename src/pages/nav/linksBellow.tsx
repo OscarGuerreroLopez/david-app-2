@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text } from "rebass";
+import { Flex, Text } from "rebass";
 import { useThemeUI } from "theme-ui";
 import { v4 as uuidv4 } from "uuid";
 

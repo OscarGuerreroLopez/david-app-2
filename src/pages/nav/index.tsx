@@ -7,8 +7,6 @@ import { LogoLeft } from "./LogoLeft";
 import { LogoRight } from "./LogoRight";
 import light from "./images/logo7.png";
 import dark from "./images/logo8.png";
-import barsLight from "./images/barsLight.png";
-import barsDark from "./images/barsDark.png";
 
 import { useThemeUI } from "theme-ui";
 
