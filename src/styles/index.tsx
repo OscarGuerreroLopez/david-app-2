@@ -35,7 +35,7 @@ export const theme = {
     oscar: "red",
     modes: {
       dark: {
-        text: "#fff",
+        text: "#F99173",
         background: "#000",
         primary: "#0cf"
       }

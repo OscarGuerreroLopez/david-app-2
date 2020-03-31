@@ -24,13 +24,14 @@ const Nav: React.FC<IProps> = (): JSX.Element => {
         sx={{
           maxHeight: "90px",
           color: theme => `${colorMode === "dark" ? "#3383FF" : null}`,
-          bg: theme => `${colorMode === "default" ? "#EEEEEC" : null}`
+          bg: theme => `${colorMode === "default" ? "#EEEEEC" : null}`,
+          px: [0, 1, 2, 2, 2, 2, 2]
         }}
       >
         <Flex
           sx={{
             ml: ["left"],
-            width: ["40%", "35%", "25%", "18%", "11%", "50%", "50%"]
+            width: ["40%", "35%", "25%", "25%", "20%", "50%", "50%"]
           }}
         >
           <LogoLeft image={colorMode === "dark" ? dark : light} />
