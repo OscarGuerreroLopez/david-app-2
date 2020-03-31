@@ -22,7 +22,7 @@ export const IndexServices: React.FC<IProps> = ({ onClick, ...props }) => {
             clientes particulares, comunidades de vecinos y empresas.
           </Text>
           <Flex>
-            <Card width={[256, 320]} mx="auto">
+            <Card width={[256, 300, 320, 340, 360, 380, 400]} mx="auto">
               <Image src={home} />
             </Card>
           </Flex>

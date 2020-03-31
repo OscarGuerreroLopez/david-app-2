@@ -28,7 +28,7 @@ export const IndexAboutUs: React.FC<IProps> = ({
           </Text>
 
           <Flex>
-            <Card width={[256, 320]} mx="auto">
+            <Card width={[256, 300, 320, 340, 360, 380, 400]} mx="auto">
               <Image src={team} />
             </Card>
           </Flex>

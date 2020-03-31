@@ -1,11 +1,13 @@
 import React from "react";
-import { Text, Flex, Image } from "rebass";
+import { Text, Flex, Image, Card } from "rebass";
 // import { useThemeUI } from "theme-ui";
 
 import { IndexAboutUs } from "./indexAboutUs";
 import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
 import garage from "./images/garage_door.jpg";
+import rapeco from "./images/rapeco.png";
+import allBrands from "./images/allBrands.png";
 
 interface IProps {}
 
@@ -83,18 +85,45 @@ const Home: React.FC<IProps> = (): JSX.Element => {
       </Flex>
 
       <Flex
+        flexWrap="wrap"
+        sx={{
+          px: [0, 0, 0, 0, 40, 70, 80],
+          pt: 4
+        }}
+      >
+        {/* <Flex flexWrap="wrap" alignItems="flex-start" width="100%"> */}
+        <Card
+          sx={{
+            width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
+            textAlign: "center"
+          }}
+        >
+          <Image src={rapeco} />
+        </Card>
+        <Card
+          sx={{
+            width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
+            textAlign: "center"
+          }}
+        >
+          <Image src={allBrands} />
+        </Card>
+        {/* </Flex> */}
+      </Flex>
+
+      <Flex
         justifyContent="flex-start"
         sx={{
           ml: ["auto"],
-          px: [0, 0, 0, 0, 40, 70, 80]
+          px: [0, 0, 0, 0, 40, 70, 80],
+          pt: 4
         }}
       >
         <Flex flexWrap="wrap" alignItems="flex-end" width="100%">
           <Flex
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-              pr: ["0", "0", "0", "0", "0", "4", "4"],
-              pt: 4
+              pr: ["0", "0", "0", "0", "0", "4", "4"]
             }}
           >
             <IndexBrands onClick={clickedIndexBrands} />
@@ -103,8 +132,7 @@ const Home: React.FC<IProps> = (): JSX.Element => {
           <Flex
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-              pl: ["0", "0", "0", "0", "0", "4", "4"],
-              pt: 4
+              pl: ["0", "0", "0", "0", "0", "4", "4"]
             }}
           >
             <IndexBrands onClick={clickedIndexBrands} />

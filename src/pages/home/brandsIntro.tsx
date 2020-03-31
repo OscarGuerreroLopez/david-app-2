@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import React from "react";
 import { Flex, Box, Text, Image } from "rebass";
-import { jsx } from "@emotion/core";
+
 import { CustomCard } from "../../components/customCard";
 
 import vds from "./images/vds.jpeg";
@@ -20,13 +19,7 @@ interface IProps {
 
 export const IndexBrands: React.FC<IProps> = props => {
   return (
-    <Flex
-      mx={0}
-      sx={{
-        display: "grid",
-        gridGap: 3 // theme.space[3]
-      }}
-    >
+    <Flex mx={0}>
       <Box width={1} px={0}>
         <CustomCard>
           <Text fontSize={[3, 4, 5]} fontWeight="bold" textAlign="center">
@@ -37,7 +30,7 @@ export const IndexBrands: React.FC<IProps> = props => {
             que trabajamos:
           </Text>
           <Flex>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={vds}
                 sx={{
@@ -47,7 +40,7 @@ export const IndexBrands: React.FC<IProps> = props => {
                 }}
               />
             </Box>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={erreka}
                 sx={{
@@ -57,7 +50,7 @@ export const IndexBrands: React.FC<IProps> = props => {
                 }}
               />
             </Box>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={bft}
                 sx={{
@@ -69,7 +62,7 @@ export const IndexBrands: React.FC<IProps> = props => {
             </Box>
           </Flex>
           <Flex>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={gibidi}
                 sx={{
@@ -79,7 +72,7 @@ export const IndexBrands: React.FC<IProps> = props => {
                 }}
               />
             </Box>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={nice}
                 sx={{
@@ -89,7 +82,7 @@ export const IndexBrands: React.FC<IProps> = props => {
                 }}
               />
             </Box>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={came}
                 sx={{
@@ -101,7 +94,7 @@ export const IndexBrands: React.FC<IProps> = props => {
             </Box>
           </Flex>
           <Flex>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={marantec}
                 sx={{
@@ -111,7 +104,7 @@ export const IndexBrands: React.FC<IProps> = props => {
                 }}
               />
             </Box>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={pujol}
                 sx={{
@@ -121,7 +114,7 @@ export const IndexBrands: React.FC<IProps> = props => {
                 }}
               />
             </Box>
-            <Box p={3} width={1} css={{ textAlign: "center" }}>
+            <Box p={3} width={1} sx={{ textAlign: "center" }}>
               <Image
                 src={clemsa}
                 sx={{
