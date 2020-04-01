@@ -1,6 +1,6 @@
 export const theme = {
   useCustomProperties: false,
-  useColorSchemeMediaQuery: true,
+  useColorSchemeMediaQuery: false,
   breakpoints: [
     "320px",
     "375px",

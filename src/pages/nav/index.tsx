@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import { Flex } from "rebass";
+import { withRouter, RouteComponentProps } from "react-router-dom";
 
 import { Links } from "./links";
 import { LinksBellow } from "./linksBellow";
 import { LogoLeft } from "./LogoLeft";
 import { LogoRight } from "./LogoRight";
+import { Icons } from "./icons";
 import light from "./images/logo7.png";
 import dark from "./images/logo8.png";
 
 import { useThemeUI } from "theme-ui";
 
-interface IProps {}
+interface IProps extends RouteComponentProps {}
 
-const Nav: React.FC<IProps> = (): JSX.Element => {
+const Nav = withRouter((props: IProps) => {
   const linkArray = ["Nosotros", "Servicios", "Contacto", "Another"];
   const [displayLinks, setDisplayLinks] = useState(false);
   const context = useThemeUI();
   const { colorMode } = context;
+  console.log(props);
+
   return (
     <>
       <Flex
@@ -31,22 +35,35 @@ const Nav: React.FC<IProps> = (): JSX.Element => {
         <Flex
           sx={{
             ml: ["left"],
-            width: ["40%", "35%", "25%", "25%", "20%", "50%", "50%"]
+            width: ["20%", "20%", "20%", "20%", "20%", "60%", "60%"]
           }}
         >
           <LogoLeft image={colorMode === "dark" ? dark : light} />
           <Links links={linkArray} />
         </Flex>
-
-        <LogoRight
-          displayLinks={displayLinks}
-          setDisplayLinks={setDisplayLinks}
-        />
+        <Flex
+          sx={{
+            ml: ["auto"]
+          }}
+        >
+          <Icons />
+        </Flex>
+        <Flex
+          sx={{
+            ml: ["auto"],
+            width: ["20%", "20%", "20%", "20%", "20%", "40%", "47%"]
+          }}
+        >
+          <LogoRight
+            displayLinks={displayLinks}
+            setDisplayLinks={setDisplayLinks}
+          />
+        </Flex>
       </Flex>
 
       <LinksBellow links={linkArray} displayLinks={displayLinks} />
     </>
   );
-};
+});
 
 export default Nav;

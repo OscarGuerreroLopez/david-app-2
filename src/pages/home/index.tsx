@@ -1,44 +1,47 @@
 import React from "react";
-import { Text, Flex, Image, Card } from "rebass";
+import { Flex, Image, Card } from "rebass";
+import { withRouter, RouteComponentProps } from "react-router-dom";
+
 // import { useThemeUI } from "theme-ui";
 
 import { IndexAboutUs } from "./indexAboutUs";
 import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
+import { ContactMini } from "./contactMini";
 import garage from "./images/garage_door.jpg";
 import rapeco from "./images/rapeco.png";
 import allBrands from "./images/allBrands.png";
 
-interface IProps {}
+interface IProps extends RouteComponentProps {}
 
-const Home: React.FC<IProps> = (): JSX.Element => {
-  // const context = useThemeUI();
-  // const { colorMode } = context;
+const Home = withRouter(
+  (props: IProps): JSX.Element => {
+    // const context = useThemeUI();
+    // const { colorMode } = context;
 
-  const clickedIndexService = () => {
-    console.log("clickedIndexService");
-  };
+    const clickedIndexService = () => {
+      console.log("clickedIndexService");
+    };
 
-  const clickedIndexAbout = () => {
-    console.log("clickedIndexAbout");
-  };
+    const clickedIndexAbout = () => {
+      console.log("clickedIndexAbout");
+    };
 
-  const clickedIndexBrands = () => {
-    console.log("clickedIndexBrands");
-  };
+    const clickedIndexBrands = () => {
+      console.log("clickedIndexBrands");
+    };
 
-  return (
-    <>
-      <Flex
-        justifyContent="flex-start"
-        sx={{
-          ml: ["auto"],
-          px: [0, 0, 0, 0, 40, 70, 80]
-        }}
-      >
+    const clickedMiniContact = () => {
+      console.log("clickedMiniContact");
+    };
+
+    return (
+      <>
         <Flex
+          justifyContent="flex-start"
           sx={{
-            bg: "blue"
+            ml: ["auto"],
+            px: [0, 0, 0, 0, 40, 70, 80]
           }}
         >
           <Image
@@ -49,98 +52,88 @@ const Home: React.FC<IProps> = (): JSX.Element => {
               filter: "grayscale(100%)"
             }}
           />
-          <Text
-            sx={{
-              position: "absolute",
-              px: ["60%", "60%", "60%", "60%", "60%", "60%", "60%"],
-              py: ["15%", "15%", "15%", "15%", "15%", "15%", "15%"],
-              fontSize: [1, 1, 2, 2, 3, 5, 6],
-              color: "white"
-            }}
-          >
-            Calidad y precio garantizados
-          </Text>
         </Flex>
-      </Flex>
-      <br />
+        <br />
 
-      <Flex
-        justifyContent="flex-start"
-        sx={{
-          ml: ["auto"],
-          px: [0, 0, 0, 0, 40, 70, 80]
-        }}
-      >
-        <IndexAboutUs onClick={clickedIndexAbout} />
-      </Flex>
-      <br />
-      <Flex
-        justifyContent="flex-start"
-        sx={{
-          ml: ["auto"],
-          px: [0, 0, 0, 0, 40, 70, 80]
-        }}
-      >
-        <IndexServices onClick={clickedIndexService} />
-      </Flex>
-
-      <Flex
-        flexWrap="wrap"
-        sx={{
-          px: [0, 0, 0, 0, 40, 70, 80],
-          pt: 4
-        }}
-      >
-        {/* <Flex flexWrap="wrap" alignItems="flex-start" width="100%"> */}
-        <Card
+        <Flex
+          justifyContent="flex-start"
           sx={{
-            width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-            textAlign: "center"
+            ml: ["auto"],
+            px: [0, 0, 0, 0, 40, 70, 80]
           }}
         >
-          <Image src={rapeco} />
-        </Card>
-        <Card
+          <IndexAboutUs onClick={clickedIndexAbout} />
+        </Flex>
+        <br />
+        <Flex
+          justifyContent="flex-start"
           sx={{
-            width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-            textAlign: "center"
+            ml: ["auto"],
+            px: [0, 0, 0, 0, 40, 70, 80]
           }}
         >
-          <Image src={allBrands} />
-        </Card>
-        {/* </Flex> */}
-      </Flex>
+          <IndexServices onClick={clickedIndexService} />
+        </Flex>
 
-      <Flex
-        justifyContent="flex-start"
-        sx={{
-          ml: ["auto"],
-          px: [0, 0, 0, 0, 40, 70, 80],
-          pt: 4
-        }}
-      >
-        <Flex flexWrap="wrap" alignItems="flex-end" width="100%">
-          <Flex
+        <Flex
+          flexWrap="wrap"
+          sx={{
+            px: [0, 0, 0, 0, 40, 70, 80],
+            pt: 4
+          }}
+        >
+          {/* <Flex flexWrap="wrap" alignItems="flex-start" width="100%"> */}
+          <Card
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-              pr: ["0", "0", "0", "0", "0", "4", "4"]
+              textAlign: "center"
             }}
           >
-            <IndexBrands onClick={clickedIndexBrands} />
-          </Flex>
-
-          <Flex
+            <Image src={rapeco} />
+          </Card>
+          <Card
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-              pl: ["0", "0", "0", "0", "0", "4", "4"]
+              textAlign: "center"
             }}
           >
-            <IndexBrands onClick={clickedIndexBrands} />
+            <Image src={allBrands} />
+          </Card>
+          {/* </Flex> */}
+        </Flex>
+
+        <Flex
+          justifyContent="flex-start"
+          sx={{
+            ml: ["auto"],
+            px: [0, 0, 0, 0, 40, 70, 80],
+            pt: 4,
+            maxHeight: "200px"
+          }}
+        >
+          <Flex flexWrap="wrap" alignItems="flex-start" width="100%">
+            <Flex
+              sx={{
+                width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
+                pr: ["0", "0", "0", "0", "0", "4", "4"]
+              }}
+            >
+              <IndexBrands onClick={clickedIndexBrands} />
+            </Flex>
+
+            <Flex
+              sx={{
+                width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
+                pl: ["0", "0", "0", "0", "0", "4", "4"]
+              }}
+            >
+              <ContactMini onClick={clickedMiniContact} />
+            </Flex>
           </Flex>
         </Flex>
-      </Flex>
-    </>
-  );
-};
+      </>
+    );
+  }
+);
 
 export default Home;

@@ -18,14 +18,13 @@ export const LogoRight: React.FC<IProps> = ({
   return (
     <Flex sx={{ ml: ["auto"] }}>
       <Box
+        width={["100%", "100%", "100%", "100%", "100%", "50%", "12%"]}
         sx={{
           ml: ["auto"],
-          px: 2,
-          py: 1,
           mt: 0,
           mb: 2,
-          minWidth: "49px",
-          minHeight: "49px",
+          minWidth: "59px",
+          minHeight: "59px",
 
           "@media screen and (min-width: 1024px)": {
             display: "none"
@@ -39,7 +38,6 @@ export const LogoRight: React.FC<IProps> = ({
       >
         <Button
           variant="outline"
-          mr={2}
           bg="inherit"
           sx={{
             mt: 3
@@ -63,12 +61,12 @@ export const LogoRight: React.FC<IProps> = ({
             display: "none"
           },
           px: 2,
-          py: [1, 1, 1, 1, 1, "23px", "13px"]
+          py: [1, 1, 1, 1, 1, "28px", "17px"]
         }}
       >
         <Text
           sx={{
-            fontSize: [4, 4, 4, 4, 4, 5, 6]
+            fontSize: [4, 4, 4, 4, 4, 28, 6]
           }}
         >
           Automatismos y cerrajeria DROS

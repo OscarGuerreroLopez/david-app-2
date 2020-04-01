@@ -11,12 +11,12 @@ export const LogoLeft: React.FC<IProps> = ({ image }): JSX.Element => {
   console.log("@@@", colorMode);
 
   return (
-    <Box width={[1, 1, 1, 1, 1, 1 / 6, 1 / 8]}>
+    <Box width={["100%", "100%", "100%", "100%", "80%", "10%", "10%"]}>
       <Image
         src={image}
         sx={{
           mt: 2,
-          px: 1,
+          pl: 1,
           height: ["80%"]
         }}
       />
