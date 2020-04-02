@@ -12,14 +12,27 @@ import dark from "./images/logo8.png";
 
 import { useThemeUI } from "theme-ui";
 
+export interface IObjectLiteral {
+  [key: string]: string;
+}
+
 interface IProps extends RouteComponentProps {}
 
-const Nav = withRouter((props: IProps) => {
-  const linkArray = ["Nosotros", "Servicios", "Contacto", "Another"];
+const Nav = withRouter(({ history, ...props }: IProps) => {
+  const linkArray = ["Nosotros", "Servicios", "Contacto"];
+  const linksObject: IObjectLiteral = {
+    Nosotros: "about",
+    Servicios: "services",
+    Contacto: "contact",
+    Galeria: "galeria"
+  };
   const [displayLinks, setDisplayLinks] = useState(false);
   const context = useThemeUI();
   const { colorMode } = context;
-  console.log(props);
+
+  const onClickLink = (link: string) => {
+    history.push(`${linksObject[link]}`);
+  };
 
   return (
     <>
@@ -39,7 +52,7 @@ const Nav = withRouter((props: IProps) => {
           }}
         >
           <LogoLeft image={colorMode === "dark" ? dark : light} />
-          <Links links={linkArray} />
+          <Links linksObject={linksObject} onClick={onClickLink} />
         </Flex>
         <Flex
           sx={{

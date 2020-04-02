@@ -3,12 +3,21 @@ import { Flex, Text } from "rebass";
 import { useThemeUI } from "theme-ui";
 import { v4 as uuidv4 } from "uuid";
 
-interface IProps {
-  links: string[];
+export interface IObjectLiteral {
+  [key: string]: string;
 }
-export const Links: React.FC<IProps> = ({ links }): JSX.Element => {
+interface IProps {
+  linksObject: IObjectLiteral;
+  onClick: (link: string) => void;
+}
+export const Links: React.FC<IProps> = ({
+  linksObject,
+  onClick
+}): JSX.Element => {
   const context = useThemeUI();
   const { colorMode, setColorMode } = context;
+
+  const links = Object.keys(linksObject);
 
   return (
     <>
@@ -32,6 +41,9 @@ export const Links: React.FC<IProps> = ({ links }): JSX.Element => {
                 fontSize: [4, 4, 4, 4, 4, 4, 5]
               }}
               key={index}
+              onClick={() => {
+                onClick(link);
+              }}
             >
               {link}
             </Text>

@@ -15,7 +15,7 @@ import allBrands from "./images/allBrands.png";
 interface IProps extends RouteComponentProps {}
 
 const Home = withRouter(
-  (props: IProps): JSX.Element => {
+  ({ history, ...props }: IProps): JSX.Element => {
     // const context = useThemeUI();
     // const { colorMode } = context;
 
@@ -107,15 +107,15 @@ const Home = withRouter(
           sx={{
             ml: ["auto"],
             px: [0, 0, 0, 0, 40, 70, 80],
-            pt: 4,
-            maxHeight: "200px"
+            pt: 4
           }}
         >
           <Flex flexWrap="wrap" alignItems="flex-start" width="100%">
             <Flex
               sx={{
                 width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-                pr: ["0", "0", "0", "0", "0", "4", "4"]
+                pr: ["0", "0", "0", "0", "0", "4", "4"],
+                height: [null, null, null, null, null, "100%", "100%"]
               }}
             >
               <IndexBrands onClick={clickedIndexBrands} />
@@ -131,6 +131,9 @@ const Home = withRouter(
             </Flex>
           </Flex>
         </Flex>
+        <br />
+        <br />
+        <br />
       </>
     );
   }

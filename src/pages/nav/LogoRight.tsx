@@ -22,7 +22,7 @@ export const LogoRight: React.FC<IProps> = ({
         sx={{
           ml: ["auto"],
           mt: 0,
-          mb: 2,
+          mb: 1,
           minWidth: "59px",
           minHeight: "59px",
 
@@ -40,7 +40,7 @@ export const LogoRight: React.FC<IProps> = ({
           variant="outline"
           bg="inherit"
           sx={{
-            mt: 3
+            mt: ["23px", "22px", "18px", "23px", "27px", "20px", "20px"]
           }}
           onClick={() => {
             setDisplayLinks(!displayLinks);
