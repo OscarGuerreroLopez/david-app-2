@@ -24,7 +24,7 @@ const Home = withRouter(
     };
 
     const clickedIndexAbout = () => {
-      console.log("clickedIndexAbout");
+      history.push("/about");
     };
 
     const clickedIndexBrands = () => {
@@ -82,7 +82,6 @@ const Home = withRouter(
             pt: 4
           }}
         >
-          {/* <Flex flexWrap="wrap" alignItems="flex-start" width="100%"> */}
           <Card
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
@@ -98,8 +97,7 @@ const Home = withRouter(
             }}
           >
             <Image src={allBrands} />
-          </Card>
-          {/* </Flex> */}
+          </Card>{" "}
         </Flex>
 
         <Flex
@@ -110,7 +108,7 @@ const Home = withRouter(
             pt: 4
           }}
         >
-          <Flex flexWrap="wrap" alignItems="flex-start" width="100%">
+          <Flex flexWrap="wrap">
             <Flex
               sx={{
                 width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
@@ -124,7 +122,8 @@ const Home = withRouter(
             <Flex
               sx={{
                 width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-                pl: ["0", "0", "0", "0", "0", "4", "4"]
+                pl: ["0", "0", "0", "0", "0", "4", "4"],
+                height: [null, null, null, null, null, "100%", "100%"]
               }}
             >
               <ContactMini onClick={clickedMiniContact} />
