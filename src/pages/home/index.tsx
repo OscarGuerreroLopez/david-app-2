@@ -8,7 +8,7 @@ import { IndexAboutUs } from "./indexAboutUs";
 import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
 import { ContactMini } from "./contactMini";
-import garage from "./images/garage_door.jpg";
+import garage from "./images/garage_door_med.jpg";
 import rapeco from "./images/rapeco.png";
 import allBrands from "./images/allBrands.png";
 
@@ -41,7 +41,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 40, 70, 80]
+            px: [0, 0, 0, 0, 40, 70, 80],
           }}
         >
           <Image
@@ -49,7 +49,7 @@ const Home = withRouter(
             sx={{
               width: ["100%"],
               height: ["100%"],
-              filter: "grayscale(100%)"
+              filter: "grayscale(100%)",
             }}
             alt="Automatismos Dros"
           />
@@ -60,7 +60,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 40, 70, 80]
+            px: [0, 0, 0, 0, 40, 70, 80],
           }}
         >
           <IndexAboutUs onClick={clickedIndexAbout} />
@@ -70,7 +70,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 40, 70, 80]
+            px: [0, 0, 0, 0, 40, 70, 80],
           }}
         >
           <IndexServices onClick={clickedIndexService} />
@@ -80,13 +80,13 @@ const Home = withRouter(
           flexWrap="wrap"
           sx={{
             px: [0, 0, 0, 0, 40, 70, 80],
-            pt: 4
+            pt: 4,
           }}
         >
           <Card
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             <Image src={rapeco} alt="Automatismos Dros" />
@@ -94,7 +94,7 @@ const Home = withRouter(
           <Card
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             <Image src={allBrands} alt="Automatismos Dros" />
@@ -106,7 +106,7 @@ const Home = withRouter(
           sx={{
             ml: ["auto"],
             px: [0, 0, 0, 0, 40, 70, 80],
-            pt: 4
+            pt: 4,
           }}
         >
           <Flex flexWrap="wrap">
@@ -114,7 +114,7 @@ const Home = withRouter(
               sx={{
                 width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
                 pr: ["0", "0", "0", "0", "0", "4", "4"],
-                height: [null, null, null, null, null, "100%", "100%"]
+                height: [null, null, null, null, null, "100%", "100%"],
               }}
             >
               <IndexBrands onClick={clickedIndexBrands} />
@@ -124,7 +124,7 @@ const Home = withRouter(
               sx={{
                 width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
                 pl: ["0", "0", "0", "0", "0", "4", "4"],
-                height: [null, null, null, null, null, "100%", "100%"]
+                height: [null, null, null, null, null, "100%", "100%"],
               }}
             >
               <ContactMini onClick={clickedMiniContact} />

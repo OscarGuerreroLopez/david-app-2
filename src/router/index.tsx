@@ -1,11 +1,11 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Loader from "../components/loader";
+import { Loader } from "../components/loader";
 import Nav from "../pages/nav";
-import About from "../pages/about";
 
 const Home = lazy(() => import("../pages/home"));
+const About = lazy(() => import("../pages/about"));
 
 const Router = () => {
   return (
