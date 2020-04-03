@@ -42,24 +42,28 @@ export const Icons: React.FC<IProps> = () => {
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <Image
-            src={Calling}
-            sx={{
-              maxHeight: [40, 80, 80, 100, 120],
-            }}
-            alt="Automatismos Dros"
-          />
+          <a href="tel:+34-622-450-008">
+            <Image
+              src={Calling}
+              sx={{
+                maxHeight: [40, 80, 80, 100, 120],
+              }}
+              alt="Automatismos Dros"
+            />
+          </a>
         </Card>
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <Image
-            src={Envelope}
-            sx={{
-              maxHeight: [40, 80, 80, 100, 120],
-            }}
-            alt="Automatismos Dros"
-          />
+          <a href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=Mira que eres tonto tu, como vaya te doy de hostias">
+            <Image
+              src={Envelope}
+              sx={{
+                maxHeight: [40, 80, 80, 100, 120],
+              }}
+              alt="Automatismos Dros"
+            />
+          </a>
         </Card>
       </Box>
     </Flex>
