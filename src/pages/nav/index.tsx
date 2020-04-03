@@ -24,7 +24,7 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
     Nosotros: "about",
     Servicios: "services",
     Contacto: "contact",
-    Galeria: "galeria"
+    Galeria: "galeria",
   };
   const [displayLinks, setDisplayLinks] = useState(false);
   const context = useThemeUI();
@@ -40,15 +40,15 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
         justifyContent="flex-start"
         sx={{
           maxHeight: "90px",
-          color: theme => `${colorMode === "dark" ? "#3383FF" : null}`,
-          bg: theme => `${colorMode === "default" ? "#EEEEEC" : null}`,
-          px: [0, 1, 2, 2, 2, 2, 2]
+          color: (theme) => `${colorMode === "dark" ? "#3383FF" : null}`,
+          // bg: (theme) => `${colorMode === "default" ? "#EEEEEC" : null}`,
+          px: [0, 1, 2, 2, 2, 2, 2],
         }}
       >
         <Flex
           sx={{
             ml: ["left"],
-            width: ["20%", "20%", "20%", "20%", "20%", "60%", "60%"]
+            width: ["20%", "20%", "20%", "20%", "20%", "60%", "60%"],
           }}
         >
           <LogoLeft image={colorMode === "dark" ? dark : light} />
@@ -56,7 +56,7 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
         </Flex>
         <Flex
           sx={{
-            ml: ["auto"]
+            ml: ["auto"],
           }}
         >
           <Icons />
@@ -64,7 +64,7 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
         <Flex
           sx={{
             ml: ["auto"],
-            width: ["20%", "20%", "20%", "20%", "20%", "40%", "47%"]
+            width: ["20%", "20%", "20%", "20%", "20%", "40%", "47%"],
           }}
         >
           <LogoRight
