@@ -51,6 +51,7 @@ const Home = withRouter(
               height: ["100%"],
               filter: "grayscale(100%)"
             }}
+            alt="Automatismos Dros"
           />
         </Flex>
         <br />
@@ -88,7 +89,7 @@ const Home = withRouter(
               textAlign: "center"
             }}
           >
-            <Image src={rapeco} />
+            <Image src={rapeco} alt="Automatismos Dros" />
           </Card>
           <Card
             sx={{
@@ -96,7 +97,7 @@ const Home = withRouter(
               textAlign: "center"
             }}
           >
-            <Image src={allBrands} />
+            <Image src={allBrands} alt="Automatismos Dros" />
           </Card>{" "}
         </Flex>
 

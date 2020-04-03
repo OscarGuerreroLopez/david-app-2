@@ -23,7 +23,7 @@ export const IndexServices: React.FC<IProps> = ({ onClick, ...props }) => {
           </Text>
           <Flex>
             <Card width={[256, 300, 320, 340, 360, 380, 400]} mx="auto">
-              <Image src={home} />
+              <Image src={home} alt="Automatismos Dros" />
             </Card>
           </Flex>
           <Text

@@ -19,6 +19,7 @@ export const LogoLeft: React.FC<IProps> = ({ image }): JSX.Element => {
           pl: 1,
           height: ["80%"]
         }}
+        alt="Automatismos Dros"
       />
     </Box>
   );

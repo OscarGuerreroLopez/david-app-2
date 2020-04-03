@@ -27,7 +27,7 @@ export const ContactMini: React.FC<IProps> = ({ onClick }): JSX.Element => {
         </Text>
         <Flex justifyContent="flex-start" flexWrap="wrap">
           <Card width={[256, 320]} mx="auto">
-            <Image src={contact} />
+            <Image src={contact} alt="Automatismos Dros" />
           </Card>
           <Text fontSize={[3, 4, 5]}>
             Si tiene cualquier tipo de propuesta que realizarnos, póngase en

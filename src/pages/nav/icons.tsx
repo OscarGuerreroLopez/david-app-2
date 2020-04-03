@@ -29,6 +29,7 @@ export const Icons: React.FC<IProps> = (...props) => {
             sx={{
               maxHeight: heightSize
             }}
+            alt="Automatismos Dros"
           />
         </Card>
       </Box>
@@ -39,6 +40,7 @@ export const Icons: React.FC<IProps> = (...props) => {
             sx={{
               maxHeight: [40, 80, 80, 100, 120]
             }}
+            alt="Automatismos Dros"
           />
         </Card>
       </Box>
@@ -49,6 +51,7 @@ export const Icons: React.FC<IProps> = (...props) => {
             sx={{
               maxHeight: [40, 80, 80, 100, 120]
             }}
+            alt="Automatismos Dros"
           />
         </Card>
       </Box>

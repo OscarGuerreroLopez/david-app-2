@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Box, Text } from "rebass";
 
 import { CustomCard } from "../../components/customCard";
-import { LittleImage } from "./littleImage";
+import { LittleImage } from "../../components/littleImage";
 
 import vds from "./images/vds.jpeg";
 import erreka from "./images/erreka.png";
@@ -18,7 +18,7 @@ interface IProps {
   onClick: () => void;
 }
 
-export const IndexBrands: React.FC<IProps> = props => {
+export const IndexBrands: React.FC<IProps> = (props) => {
   return (
     <Flex mx={0}>
       <Box width={1} px={0}>

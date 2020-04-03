@@ -14,6 +14,7 @@ export const LittleImage: React.FC<IProps> = ({ picture }): JSX.Element => {
           height: 68,
           borderRadius: 9
         }}
+        alt={picture}
       />
     </Box>
   );

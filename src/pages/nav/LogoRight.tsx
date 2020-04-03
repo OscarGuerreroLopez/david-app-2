@@ -52,6 +52,7 @@ export const LogoRight: React.FC<IProps> = ({
             sx={{
               width: ["100%", "100%"]
             }}
+            alt="Automatismos Dros"
           />
         </Button>
       </Box>
