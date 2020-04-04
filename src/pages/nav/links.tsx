@@ -12,7 +12,7 @@ interface IProps {
 }
 export const Links: React.FC<IProps> = ({
   linksObject,
-  onClick
+  onClick,
 }): JSX.Element => {
   const context = useThemeUI();
   const { colorMode, setColorMode } = context;
@@ -27,8 +27,9 @@ export const Links: React.FC<IProps> = ({
           cursor: "pointer",
 
           "@media screen and (max-width: 1023px)": {
-            display: "none"
-          }
+            display: "none",
+          },
+          fontFamily: "chewy",
         }}
       >
         {links.map((link: string) => {
@@ -38,7 +39,7 @@ export const Links: React.FC<IProps> = ({
               sx={{
                 px: 2,
                 py: [1, 1, 1, 1, 1, 4, 4],
-                fontSize: [4, 4, 4, 4, 4, 4, 5]
+                fontSize: [4, 4, 4, 4, 4, 3, 4],
               }}
               key={index}
               onClick={() => {
@@ -53,7 +54,7 @@ export const Links: React.FC<IProps> = ({
           sx={{
             px: 2,
             py: [1, 1, 1, 1, 1, 4, 4],
-            fontSize: [4, 4, 4, 4, 4, 4, 5]
+            fontSize: [4, 4, 4, 4, 4, 3, 4],
           }}
           onClick={() => {
             setColorMode(colorMode === "default" ? "dark" : "default");

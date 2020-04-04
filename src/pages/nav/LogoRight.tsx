@@ -68,6 +68,7 @@ export const LogoRight: React.FC<IProps> = ({
         <Text
           sx={{
             fontSize: [4, 4, 4, 4, 4, 28, 6],
+            fontFamily: "chewy",
           }}
         >
           Automatismos y cerrajeria DROS

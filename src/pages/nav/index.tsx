@@ -24,7 +24,7 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
     Nosotros: "about",
     Servicios: "services",
     Contacto: "contact",
-    Galeria: "galeria",
+    Galeria: "gallery",
   };
   const [displayLinks, setDisplayLinks] = useState(false);
   const context = useThemeUI();
@@ -32,6 +32,10 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
 
   const onClickLink = (link: string) => {
     history.push(`${linksObject[link]}`);
+  };
+
+  const onClickLogoLeft = () => {
+    history.push("/");
   };
 
   return (
@@ -51,7 +55,10 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
             width: ["20%", "20%", "20%", "20%", "20%", "60%", "60%"],
           }}
         >
-          <LogoLeft image={colorMode === "dark" ? dark : light} />
+          <LogoLeft
+            image={colorMode === "dark" ? dark : light}
+            onClick={onClickLogoLeft}
+          />
           <Links linksObject={linksObject} onClick={onClickLink} />
         </Flex>
         <Flex
@@ -74,7 +81,11 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
         </Flex>
       </Flex>
 
-      <LinksBellow links={linkArray} displayLinks={displayLinks} />
+      <LinksBellow
+        links={linkArray}
+        displayLinks={displayLinks}
+        onClick={onClickLink}
+      />
     </>
   );
 });

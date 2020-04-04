@@ -4,8 +4,9 @@ import { Box, Image } from "rebass";
 
 interface IProps {
   image: string;
+  onClick: () => void;
 }
-export const LogoLeft: React.FC<IProps> = ({ image }): JSX.Element => {
+export const LogoLeft: React.FC<IProps> = ({ image, onClick }): JSX.Element => {
   // const context = useThemeUI();
   // const { colorMode } = context;
 
@@ -19,6 +20,7 @@ export const LogoLeft: React.FC<IProps> = ({ image }): JSX.Element => {
           height: ["80%"],
         }}
         alt="Automatismos Dros"
+        onClick={() => onClick()}
       />
     </Box>
   );
