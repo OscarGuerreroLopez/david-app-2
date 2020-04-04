@@ -3,18 +3,24 @@ import { Flex, Text } from "rebass";
 import { useThemeUI } from "theme-ui";
 import { v4 as uuidv4 } from "uuid";
 
+export interface IObjectLiteral {
+  [key: string]: string;
+}
+
 interface IProps {
-  links: string[];
+  linksObject: IObjectLiteral;
   displayLinks: boolean;
   onClick: (link: string) => void;
 }
 export const LinksBellow: React.FC<IProps> = ({
-  links,
+  linksObject,
   displayLinks,
   onClick,
 }): JSX.Element => {
   const context = useThemeUI();
   const { colorMode, setColorMode } = context;
+
+  const links = Object.keys(linksObject);
 
   return (
     <>

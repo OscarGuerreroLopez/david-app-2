@@ -19,7 +19,6 @@ export interface IObjectLiteral {
 interface IProps extends RouteComponentProps {}
 
 const Nav = withRouter(({ history, ...props }: IProps) => {
-  const linkArray = ["Nosotros", "Servicios", "Contacto"];
   const linksObject: IObjectLiteral = {
     Nosotros: "about",
     Servicios: "services",
@@ -82,7 +81,7 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
       </Flex>
 
       <LinksBellow
-        links={linkArray}
+        linksObject={linksObject}
         displayLinks={displayLinks}
         onClick={onClickLink}
       />

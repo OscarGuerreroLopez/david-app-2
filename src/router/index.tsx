@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Loader } from "../components/loader";
 import Nav from "../pages/nav";
+import Footer from "../components/footer";
 
 const Home = lazy(() => import("../pages/home"));
 const About = lazy(() => import("../pages/about"));
@@ -22,6 +23,7 @@ const Router = () => {
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/contact" exact component={Contact} />
         </Switch>
+        <Footer />
       </Suspense>
     </BrowserRouter>
   );
