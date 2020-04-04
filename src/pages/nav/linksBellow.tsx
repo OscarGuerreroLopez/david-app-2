@@ -9,7 +9,7 @@ interface IProps {
 }
 export const LinksBellow: React.FC<IProps> = ({
   links,
-  displayLinks
+  displayLinks,
 }): JSX.Element => {
   const context = useThemeUI();
   const { colorMode, setColorMode } = context;
@@ -24,10 +24,10 @@ export const LinksBellow: React.FC<IProps> = ({
               justifyContent="center"
               sx={{
                 "@media screen and (min-width: 1023px)": {
-                  display: "none"
+                  display: "none",
                 },
-                color: theme => `${colorMode === "dark" ? "#3383FF" : null}`,
-                bg: theme => `${colorMode === "default" ? "#EEEEEC" : null}`
+                color: (theme) => `${colorMode === "dark" ? "#3383FF" : null}`,
+                // bg: theme => `${colorMode === "default" ? "#EEEEEC" : null}`
               }}
               key={index}
             >
@@ -41,10 +41,10 @@ export const LinksBellow: React.FC<IProps> = ({
           sx={{
             cursor: "pointer",
             "@media screen and (min-width: 1023px)": {
-              display: "none"
+              display: "none",
             },
-            color: theme => `${colorMode === "dark" ? "#3383FF" : null}`,
-            bg: theme => `${colorMode === "default" ? "#EEEEEC" : null}`
+            color: (theme) => `${colorMode === "dark" ? "#3383FF" : null}`,
+            // bg: (theme) => `${colorMode === "default" ? "#EEEEEC" : null}`,
           }}
           onClick={() => {
             setColorMode(colorMode === "default" ? "dark" : "default");

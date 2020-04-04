@@ -6,7 +6,7 @@ import { Links } from "./links";
 import { LinksBellow } from "./linksBellow";
 import { LogoLeft } from "./LogoLeft";
 import { LogoRight } from "./LogoRight";
-import { Icons } from "./icons";
+import { Icons } from "../../components/icons";
 import light from "./images/logo7.png";
 import dark from "./images/logo8.png";
 

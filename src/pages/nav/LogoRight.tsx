@@ -11,7 +11,7 @@ interface IProps {
 }
 export const LogoRight: React.FC<IProps> = ({
   displayLinks,
-  setDisplayLinks
+  setDisplayLinks,
 }): JSX.Element => {
   const context = useThemeUI();
   const { colorMode } = context;
@@ -27,20 +27,20 @@ export const LogoRight: React.FC<IProps> = ({
           minHeight: "59px",
 
           "@media screen and (min-width: 1024px)": {
-            display: "none"
+            display: "none",
           },
 
           svg: {
             position: "relative",
-            top: "2px"
-          }
+            top: "2px",
+          },
         }}
       >
         <Button
           variant="outline"
           bg="inherit"
           sx={{
-            mt: ["23px", "22px", "18px", "23px", "27px", "20px", "20px"]
+            mt: ["23px", "22px", "18px", "23px", "27px", "20px", "20px"],
           }}
           onClick={() => {
             setDisplayLinks(!displayLinks);
@@ -50,7 +50,7 @@ export const LogoRight: React.FC<IProps> = ({
             // src={colorMode === "dark" ? barsDark : barsLight}
             src={colorMode === "default" ? bars : bars2}
             sx={{
-              width: ["100%", "100%"]
+              width: ["100%", "100%"],
             }}
             alt="Automatismos Dros"
           />
@@ -59,15 +59,15 @@ export const LogoRight: React.FC<IProps> = ({
       <Box
         sx={{
           "@media screen and (max-width: 1023px)": {
-            display: "none"
+            display: "none",
           },
           px: 2,
-          py: [1, 1, 1, 1, 1, "28px", "17px"]
+          py: [1, 1, 1, 1, 1, "28px", "17px"],
         }}
       >
         <Text
           sx={{
-            fontSize: [4, 4, 4, 4, 4, 28, 6]
+            fontSize: [4, 4, 4, 4, 4, 28, 6],
           }}
         >
           Automatismos y cerrajeria DROS

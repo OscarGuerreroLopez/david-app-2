@@ -14,7 +14,7 @@ export const ContactMini: React.FC<IProps> = ({ onClick }): JSX.Element => {
       sx={{
         textAlign: "center",
         position: "relative",
-        pt: [3, 4, 4, 4, 4, 0, 0]
+        pt: [3, 4, 4, 4, 4, 0, 0],
       }}
     >
       <CustomCard>
@@ -29,12 +29,14 @@ export const ContactMini: React.FC<IProps> = ({ onClick }): JSX.Element => {
           <Card width={[256, 320]} mx="auto">
             <Image src={contact} alt="Automatismos Dros" />
           </Card>
+
           <Text fontSize={[3, 4, 5]}>
             Si tiene cualquier tipo de propuesta que realizarnos, póngase en
             contacto con nosotros a través de nuestro formulario de contacto, el
             cual podrá encontrar en el menú superior o pulsando el enlace bajo
             este texto.
           </Text>
+
           <Text
             fontSize={[4, 5, 5, 5, 5, 5, 5]}
             fontWeight="bold"

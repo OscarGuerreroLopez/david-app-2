@@ -8,6 +8,8 @@ import { IndexAboutUs } from "./indexAboutUs";
 import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
 import { ContactMini } from "./contactMini";
+import { MobileBanner } from "./mobileBanner";
+
 import garage from "./images/garage_door_med.jpg";
 import rapeco from "./images/rapeco.png";
 import allBrands from "./images/allBrands.png";
@@ -55,7 +57,8 @@ const Home = withRouter(
           />
         </Flex>
         <br />
-
+        <MobileBanner />
+        <br />
         <Flex
           justifyContent="flex-start"
           sx={{
@@ -75,7 +78,6 @@ const Home = withRouter(
         >
           <IndexServices onClick={clickedIndexService} />
         </Flex>
-
         <Flex
           flexWrap="wrap"
           sx={{
@@ -100,7 +102,6 @@ const Home = withRouter(
             <Image src={allBrands} alt="Automatismos Dros" />
           </Card>{" "}
         </Flex>
-
         <Flex
           justifyContent="flex-start"
           sx={{
