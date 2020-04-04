@@ -14,11 +14,9 @@ import marantec from "./images/marantec.jpg";
 import pujol from "./images/pujol.png";
 import clemsa from "./images/clemsa.png";
 
-interface IProps {
-  onClick: () => void;
-}
+interface IProps {}
 
-export const IndexBrands: React.FC<IProps> = (props) => {
+export const IndexBrands: React.FC<IProps> = () => {
   return (
     <Flex mx={0}>
       <Box width={1} px={0}>

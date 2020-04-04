@@ -22,19 +22,15 @@ const Home = withRouter(
     // const { colorMode } = context;
 
     const clickedIndexService = () => {
-      console.log("clickedIndexService");
+      history.push("/services");
     };
 
     const clickedIndexAbout = () => {
       history.push("/about");
     };
 
-    const clickedIndexBrands = () => {
-      console.log("clickedIndexBrands");
-    };
-
     const clickedMiniContact = () => {
-      console.log("clickedMiniContact");
+      history.push("/contact");
     };
 
     return (
@@ -118,7 +114,7 @@ const Home = withRouter(
                 height: [null, null, null, null, null, "100%", "100%"],
               }}
             >
-              <IndexBrands onClick={clickedIndexBrands} />
+              <IndexBrands />
             </Flex>
 
             <Flex
