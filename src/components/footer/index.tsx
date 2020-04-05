@@ -97,7 +97,7 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
         <Flex
           sx={{
             width: ["100%", "100%", "100%", "100%", "100%", "33.3%", "33.3%"],
-            fontFamily: "chewy",
+            fontFamily: "Cambay",
             p: 4,
           }}
         >
