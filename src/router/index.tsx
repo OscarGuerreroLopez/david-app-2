@@ -10,6 +10,7 @@ const About = lazy(() => import("../pages/about"));
 const Services = lazy(() => import("../pages/services"));
 const Contact = lazy(() => import("../pages/contact"));
 const Gallery = lazy(() => import("../pages/gallery"));
+const Privacy = lazy(() => import("../pages/privacy"));
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
           <Route path="/services" exact component={Services} />
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/privacy" exact component={Privacy} />
         </Switch>
         <Footer />
       </Suspense>

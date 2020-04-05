@@ -53,7 +53,7 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
           <Link text={"Quienes somos"} link={"/about"} />
           <Link text={"Nuestros Servicios"} link={"/services"} />
           <Link text={"Contacto"} link={"/contact"} />
-          <Link text={"Politica de privacidad"} link={"/contact"} />
+          <Link text={"Politica de privacidad"} link={"/privacy"} />
         </Flex>
 
         <Flex
