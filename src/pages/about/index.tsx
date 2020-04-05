@@ -63,10 +63,14 @@ const About: React.FC<IProps> = (): JSX.Element => {
           }}
         >
           <CustomCard>
-            <Text fontSize={[3, 4, 5]} fontWeight="bold" textAlign="center">
+            <Text
+              fontSize={[3, 3, 4, 4, 4, 5, 5]}
+              fontWeight="bold"
+              textAlign="center"
+            >
               Quienes somos:
             </Text>
-            <Text p={1} fontSize={[2, 3, 5]}>
+            <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
               Nuestra empresa está formada por grandes profesionales del sector
               de la cerrajería, automatismos y carpintería metálica. En DROS
               Automatismos y Cerrajería nos caracterizamos por nuestro alto
@@ -95,10 +99,14 @@ const About: React.FC<IProps> = (): JSX.Element => {
           }}
         >
           <CustomCard>
-            <Text fontSize={[3, 4, 5]} fontWeight="bold" textAlign="center">
+            <Text
+              fontSize={[3, 3, 4, 4, 4, 5, 5]}
+              fontWeight="bold"
+              textAlign="center"
+            >
               Que ofrecemos:
             </Text>
-            <Text p={1} fontSize={[2, 3, 5]}>
+            <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
               Ofrecemos todo tipo de servicios relacionados con cerrajería:
               cerraduras de alta seguridad, apertura urgente, instalación y
               mantenimiento de automatismos, carpintería metálica, vallados y
@@ -118,10 +126,14 @@ const About: React.FC<IProps> = (): JSX.Element => {
         }}
       >
         <CustomCard>
-          <Text fontSize={[3, 4, 5]} fontWeight="bold" textAlign="center">
+          <Text
+            fontSize={[3, 3, 4, 4, 4, 5, 5]}
+            fontWeight="bold"
+            textAlign="center"
+          >
             Por que confiar en nosotros?:
           </Text>
-          <Text p={1} fontSize={[2, 3, 5]}>
+          <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
             Contamos con 30 años de experiencia en el sector. Tenemos el
             objetivo de conseguir la confianza de nuestros clientes, ofreciendo
             un servicio de alta calidad y a un precio justo.
