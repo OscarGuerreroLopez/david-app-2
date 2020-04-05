@@ -2,7 +2,7 @@ import React from "react";
 
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { Flex, Text, Image, Box } from "rebass";
-// import { useThemeUI } from "theme-ui";
+import { useThemeUI } from "theme-ui";
 
 import arrowUp from "../images/arrowUp.svg";
 
@@ -34,15 +34,18 @@ const Link = withRouter(({ text, link, history }: ILink) => {
 });
 
 const Footer: React.FC<IProps> = (): JSX.Element => {
-  // const context = useThemeUI();
-  // const { colorMode } = context;
+  const context = useThemeUI();
+  const { colorMode } = context;
 
   return (
     <>
       <Flex
         //   color={colorMode === "default" ? null : "#EEEEEC"}
         flexWrap="wrap"
-        sx={{ mt: [4, 4, 4, 4, 4, 4, 4] }}
+        sx={{
+          mt: [4, 4, 4, 4, 4, 4, 4],
+          bg: (theme) => `${colorMode === "default" ? "#EEEEEC" : "#342719"}`,
+        }}
       >
         <Flex
           flexWrap="wrap"
@@ -119,43 +122,43 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
             </Flex>
           </Box>
         </Flex>
-      </Flex>
-      <Flex
-        sx={{
-          width: ["100%", "100%", "100%", "100%", "100%", "33%", "33%"],
-          mt: [2, 2, 2, 2, 2, 1, 1],
-          justifyContent: "center",
-        }}
-      >
-        <Image
-          src={arrowUp}
+        <Flex
           sx={{
-            width: 58,
-            height: 48,
-            borderRadius: 9999,
-            display: [
-              "inline",
-              "inline",
-              "inline",
-              "inline",
-              "inline",
-              "none",
-              "none",
-            ],
+            width: ["100%", "100%", "100%", "100%", "100%", "33%", "33%"],
+            mt: [2, 2, 2, 2, 2, 1, 1],
+            justifyContent: "center",
           }}
-          onClick={() => {
-            try {
-              window.scroll({
-                top: 0,
-                left: 0,
-                behavior: "smooth",
-              });
-            } catch (error) {
-              // just a fallback for older browsers
-              window.scrollTo(0, 0);
-            }
-          }}
-        />
+        >
+          <Image
+            src={arrowUp}
+            sx={{
+              width: 58,
+              height: 48,
+              borderRadius: 9999,
+              display: [
+                "inline",
+                "inline",
+                "inline",
+                "inline",
+                "inline",
+                "none",
+                "none",
+              ],
+            }}
+            onClick={() => {
+              try {
+                window.scroll({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              } catch (error) {
+                // just a fallback for older browsers
+                window.scrollTo(0, 0);
+              }
+            }}
+          />
+        </Flex>
       </Flex>
     </>
   );
