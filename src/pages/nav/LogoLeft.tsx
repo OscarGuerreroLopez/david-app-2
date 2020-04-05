@@ -18,6 +18,7 @@ export const LogoLeft: React.FC<IProps> = ({ image, onClick }): JSX.Element => {
           mt: 2,
           pl: 1,
           height: ["80%"],
+          cursor: "pointer",
         }}
         alt="Automatismos Dros"
         onClick={() => onClick()}

@@ -34,7 +34,7 @@ export const IndexAboutUs: React.FC<IProps> = ({
           </Flex>
 
           <Text
-            fontSize={[3, 4, 4]}
+            fontSize={[2, 2, 3, 4, 5]}
             fontWeight="bold"
             style={{ cursor: "pointer", color: "#3383FF" }}
             onClick={onClick}

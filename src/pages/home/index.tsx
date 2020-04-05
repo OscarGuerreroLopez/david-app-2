@@ -128,9 +128,6 @@ const Home = withRouter(
             </Flex>
           </Flex>
         </Flex>
-        <br />
-        <br />
-        <br />
       </>
     );
   }

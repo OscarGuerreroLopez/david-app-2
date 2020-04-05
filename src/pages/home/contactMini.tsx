@@ -38,7 +38,7 @@ export const ContactMini: React.FC<IProps> = ({ onClick }): JSX.Element => {
           </Text>
 
           <Text
-            fontSize={[4, 5, 5, 5, 5, 5, 5]}
+            fontSize={[2, 3, 4, 4, 5]}
             fontWeight="bold"
             style={{ cursor: "pointer", color: "#3383FF" }}
             onClick={onClick}
