@@ -39,7 +39,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 40, 70, 80],
+            px: [0, 0, 0, 0, 0, 170, 180],
           }}
         >
           <Image
@@ -59,7 +59,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 40, 70, 80],
+            px: [0, 0, 0, 0, 0, 170, 180],
           }}
         >
           <IndexAboutUs onClick={clickedIndexAbout} />
@@ -69,7 +69,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 40, 70, 80],
+            px: [0, 0, 0, 0, 0, 170, 180],
           }}
         >
           <IndexServices onClick={clickedIndexService} />
@@ -77,7 +77,7 @@ const Home = withRouter(
         <Flex
           flexWrap="wrap"
           sx={{
-            px: [0, 0, 0, 0, 40, 70, 80],
+            px: [0, 0, 0, 0, 0, 170, 180],
             pt: 4,
           }}
         >
@@ -102,7 +102,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 40, 70, 80],
+            px: [0, 0, 0, 0, 0, 170, 180],
             pt: 4,
           }}
         >

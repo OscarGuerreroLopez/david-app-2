@@ -36,7 +36,7 @@ const About: React.FC<IProps> = (): JSX.Element => {
     <Flex
       flexWrap="wrap"
       sx={{
-        px: [0, 0, 0, 0, 40, 70, 80],
+        px: [0, 0, 0, 0, 0, 170, 180],
       }}
     >
       <Image
@@ -106,14 +106,14 @@ const About: React.FC<IProps> = (): JSX.Element => {
         flexWrap="wrap"
         justifyContent="center"
         sx={{
-          width: ["100%", "100%", "100%", "100%", "100%", "100%", "100%"],
+          width: ["100%"],
           pr: ["0", "0", "0", "0", "0", "2", "2"],
           pt: ["4"],
           pl: ["0", "0", "0", "0", "0", "2", "2"],
         }}
       >
-        <Flex px={4}>
-          <Box>
+        <Flex>
+          <Box pl={[0, 2, 3, 4, 5, 5, 0]}>
             <Image
               src={quality}
               sx={{
@@ -122,7 +122,7 @@ const About: React.FC<IProps> = (): JSX.Element => {
               }}
             />
           </Box>
-          <Box p={1}>
+          <Box p={1} pr={[0, 2, 3, 4, 5, 5, 0]}>
             <Image
               src={speed}
               sx={{

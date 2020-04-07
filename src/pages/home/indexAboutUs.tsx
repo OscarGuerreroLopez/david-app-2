@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text, Card, Image, Box } from "rebass";
+import { Flex, Text, Card, Image } from "rebass";
 
 import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";

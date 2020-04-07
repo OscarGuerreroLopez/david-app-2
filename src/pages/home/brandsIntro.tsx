@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text } from "rebass";
+import { Flex, Box } from "rebass";
 
 import { CustomCard } from "../../components/customCard";
 import { LittleImage } from "../../components/littleImage";
@@ -19,7 +19,7 @@ interface IProps {}
 
 export const IndexBrands: React.FC<IProps> = () => {
   return (
-    <Flex mx={0}>
+    <Flex mx={0} width={["100%"]}>
       <Box width={1} px={0}>
         <CustomCard>
           <Content

@@ -12,7 +12,7 @@ interface IProps {
 export const IndexServices: React.FC<IProps> = ({ onClick, ...props }) => {
   return (
     <Flex mx={0} width={["100%"]}>
-      <CustomCard>
+      <CustomCard width={["100%"]}>
         <Content
           title={"Nuestros servicios"}
           content={
