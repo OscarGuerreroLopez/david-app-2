@@ -8,6 +8,28 @@ import garage from "./images/garage_door_small.jpg";
 
 interface IProps {}
 
+interface IContent {
+  title: string;
+  content: string;
+}
+
+const Content: React.FC<IContent> = ({ title, content }): JSX.Element => {
+  return (
+    <>
+      <Text
+        fontSize={[3, 3, 4, 4, 4, 5, 5]}
+        fontWeight="bold"
+        textAlign="center"
+      >
+        {title}:
+      </Text>
+      <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
+        {content}
+      </Text>
+    </>
+  );
+};
+
 const About: React.FC<IProps> = (): JSX.Element => {
   useEffect(() => {
     const getData = async (): Promise<any> => {
@@ -63,21 +85,12 @@ const About: React.FC<IProps> = (): JSX.Element => {
           }}
         >
           <CustomCard>
-            <Text
-              fontSize={[3, 3, 4, 4, 4, 5, 5]}
-              fontWeight="bold"
-              textAlign="center"
-            >
-              Quienes somos:
-            </Text>
-            <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
-              Nuestra empresa está formada por grandes profesionales del sector
-              de la cerrajería, automatismos y carpintería metálica. En DROS
-              Automatismos y Cerrajería nos caracterizamos por nuestro alto
-              nivel de profesionalidad, ofreciendo siempre un servicio ágil,
-              rápido y serio, consiguiendo un alto nivel de satisfacción en
-              nuestros clientes.
-            </Text>
+            <Content
+              title={"Quienes somos"}
+              content={
+                "Nuestra empresa está formada por grandes profesionales del sector de la cerrajería, automatismos y carpintería metálica. En DROS Automatismos y Cerrajería nos caracterizamos por nuestro alto nivel de profesionalidad, ofreciendo siempre un servicio ágil, rápido y serio, consiguiendo un alto nivel de satisfacción en nuestros clientes."
+              }
+            />
           </CustomCard>
         </Flex>
         <Flex
@@ -99,20 +112,12 @@ const About: React.FC<IProps> = (): JSX.Element => {
           }}
         >
           <CustomCard>
-            <Text
-              fontSize={[3, 3, 4, 4, 4, 5, 5]}
-              fontWeight="bold"
-              textAlign="center"
-            >
-              Que ofrecemos:
-            </Text>
-            <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
-              Ofrecemos todo tipo de servicios relacionados con cerrajería:
-              cerraduras de alta seguridad, apertura urgente, instalación y
-              mantenimiento de automatismos, carpintería metálica, vallados y
-              cerramientos… Trabajamos tanto para comunidades como para
-              aseguradoras o particulares.
-            </Text>
+            <Content
+              title={"Que ofrecemos"}
+              content={
+                "Ofrecemos todo tipo de servicios relacionados con cerrajería: cerraduras de alta seguridad, apertura urgente, instalación y mantenimiento de automatismos, carpintería metálica, vallados y cerramientos… Trabajamos tanto para comunidades como para aseguradoras o particulares."
+              }
+            />
           </CustomCard>
         </Flex>
       </Flex>
@@ -126,18 +131,12 @@ const About: React.FC<IProps> = (): JSX.Element => {
         }}
       >
         <CustomCard>
-          <Text
-            fontSize={[3, 3, 4, 4, 4, 5, 5]}
-            fontWeight="bold"
-            textAlign="center"
-          >
-            Por que confiar en nosotros?:
-          </Text>
-          <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
-            Contamos con 30 años de experiencia en el sector. Tenemos el
-            objetivo de conseguir la confianza de nuestros clientes, ofreciendo
-            un servicio de alta calidad y a un precio justo.
-          </Text>
+          <Content
+            title={"Por que confiar en nosotros?"}
+            content={
+              "Contamos con 30 años de experiencia en el sector. Tenemos el  objetivo de conseguir la confianza de nuestros clientes, ofreciendo un servicio de alta calidad y a un precio justo."
+            }
+          />
         </CustomCard>
       </Flex>
     </Flex>
