@@ -1,34 +1,15 @@
 import React, { useEffect } from "react";
-import { Flex, Text, Image } from "rebass";
+import { Flex, Image, Box } from "rebass";
 import axios from "axios";
 import { find as _find } from "lodash";
 
 import { CustomCard } from "../../components/customCard";
+import { Content } from "../../components/cardContent";
 import garage from "./images/garage_door_small.jpg";
+import speed from "./images/speed.png";
+import quality from "./images/quality.png";
 
 interface IProps {}
-
-interface IContent {
-  title: string;
-  content: string;
-}
-
-const Content: React.FC<IContent> = ({ title, content }): JSX.Element => {
-  return (
-    <>
-      <Text
-        fontSize={[3, 3, 4, 4, 4, 5, 5]}
-        fontWeight="bold"
-        textAlign="center"
-      >
-        {title}:
-      </Text>
-      <Text p={1} fontSize={[3, 3, 3, 3, 4, 4, 5]}>
-        {content}
-      </Text>
-    </>
-  );
-};
 
 const About: React.FC<IProps> = (): JSX.Element => {
   useEffect(() => {
@@ -122,6 +103,7 @@ const About: React.FC<IProps> = (): JSX.Element => {
         </Flex>
       </Flex>
       <Flex
+        flexWrap="wrap"
         justifyContent="center"
         sx={{
           width: ["100%", "100%", "100%", "100%", "100%", "100%", "100%"],
@@ -130,14 +112,36 @@ const About: React.FC<IProps> = (): JSX.Element => {
           pl: ["0", "0", "0", "0", "0", "2", "2"],
         }}
       >
-        <CustomCard>
-          <Content
-            title={"Por que confiar en nosotros?"}
-            content={
-              "Contamos con 30 años de experiencia en el sector. Tenemos el  objetivo de conseguir la confianza de nuestros clientes, ofreciendo un servicio de alta calidad y a un precio justo."
-            }
-          />
-        </CustomCard>
+        <Flex px={4}>
+          <Box>
+            <Image
+              src={quality}
+              sx={{
+                width: ["100%"],
+                borderRadius: 8,
+              }}
+            />
+          </Box>
+          <Box p={1}>
+            <Image
+              src={speed}
+              sx={{
+                width: ["100%"],
+                borderRadius: 8,
+              }}
+            />
+          </Box>
+        </Flex>
+        <Flex>
+          <CustomCard>
+            <Content
+              title={"Por que confiar en nosotros?"}
+              content={
+                "Contamos con 30 años de experiencia en el sector. Tenemos el  objetivo de conseguir la confianza de nuestros clientes, ofreciendo un servicio de alta calidad y a un precio justo."
+              }
+            />
+          </CustomCard>
+        </Flex>
       </Flex>
     </Flex>
   );

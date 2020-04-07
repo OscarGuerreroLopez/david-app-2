@@ -3,6 +3,7 @@ import { Flex, Box, Text } from "rebass";
 
 import { CustomCard } from "../../components/customCard";
 import { LittleImage } from "../../components/littleImage";
+import { Content } from "../../components/cardContent";
 
 import vds from "./images/vds.jpeg";
 import erreka from "./images/erreka.png";
@@ -21,13 +22,14 @@ export const IndexBrands: React.FC<IProps> = () => {
     <Flex mx={0}>
       <Box width={1} px={0}>
         <CustomCard>
-          <Text fontSize={[3, 4, 5]} fontWeight="bold" textAlign="center">
-            Trabajamos todas las marcas
-          </Text>
-          <Text p={1} fontSize={[2, 3, 5]}>
-            Tanto nacionales como de importacion, algunas de las mas destacadas
-            que trabajamos:
-          </Text>
+          <Content
+            title={"Trabajamos todas las marcas"}
+            content={
+              "Tanto nacionales como de importacion, algunas de las mas destacadas\
+            que trabajamos:"
+            }
+          />
+
           <Flex>
             <LittleImage picture={vds} />
             <LittleImage picture={erreka} />
