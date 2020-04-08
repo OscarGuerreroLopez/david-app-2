@@ -120,6 +120,20 @@ const About: React.FC<IProps> = (): JSX.Element => {
             />
           </CustomCard>
         </Flex>
+        <Flex pt="4">
+          <CustomCard>
+            <Content
+              title={"Nuestro compromiso"}
+              content={
+                "Contamos con un equipo de trabajo que ama su oficio y que sabe lo que es esforzarse para obtener un excelente resultado final. \
+              Tenemos claro nuestros objetivos y la normativa vigente cuando de reparación de puertas automáticas se trata.\
+              En Automatismos y cerrajeria DROS entendemos que este es un sector cada día más competitivo y de reputación, por esta razón, \
+              nos esforzamos para ofrecerle calidad en cada servicio prestado, dedicándole buena parte de nuestro empeño al estudio de nuevos materiales y de efectivas soluciones de reparación de puertas automáticas de garaje y cerrajeria en general.\
+              "
+              }
+            />
+          </CustomCard>
+        </Flex>
       </Flex>
     </Flex>
   );
