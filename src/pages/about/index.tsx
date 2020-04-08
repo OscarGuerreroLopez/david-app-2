@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Flex, Image, Box } from "rebass";
-import axios from "axios";
-import { find as _find } from "lodash";
 
 import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";
@@ -12,26 +10,6 @@ import quality from "./images/quality.png";
 interface IProps {}
 
 const About: React.FC<IProps> = (): JSX.Element => {
-  useEffect(() => {
-    const getData = async (): Promise<any> => {
-      try {
-        const result = await axios.get(
-          "https://public.opendatasoft.com/api/records/1.0/search/?dataset=espana-municipios&facet=communidad_autonoma&facet=provincia&facet=municipio&refine.provincia=Madrid"
-        );
-        console.log(result.data.facet_groups);
-        const municipios = _find(result.data.facet_groups, (o) => {
-          return o.name === "municipio";
-        });
-
-        console.log(municipios.facets);
-      } catch (error) {
-        console.log("!!!", error);
-      }
-    };
-
-    getData();
-  }, []);
-
   return (
     <Flex
       flexWrap="wrap"

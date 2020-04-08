@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Card, Image } from "rebass";
+import { Flex, Text, Card, Image } from "rebass";
 
 import home from "./images/undraw_coming_home_52ir.svg";
 import { CustomCard } from "../../components/customCard";

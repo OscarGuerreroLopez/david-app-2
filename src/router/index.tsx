@@ -24,6 +24,7 @@ const Router = () => {
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/privacy" exact component={Privacy} />
+          <Route component={Home} />
         </Switch>
         <Footer />
       </Suspense>
