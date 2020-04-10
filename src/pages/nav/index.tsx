@@ -84,6 +84,7 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
         linksObject={linksObject}
         displayLinks={displayLinks}
         onClick={onClickLink}
+        setDisplayLinks={setDisplayLinks}
       />
     </>
   );

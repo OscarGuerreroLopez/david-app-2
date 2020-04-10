@@ -11,11 +11,13 @@ interface IProps {
   linksObject: IObjectLiteral;
   displayLinks: boolean;
   onClick: (link: string) => void;
+  setDisplayLinks: (displayLinks: boolean) => void;
 }
 export const LinksBellow: React.FC<IProps> = ({
   linksObject,
   displayLinks,
   onClick,
+  setDisplayLinks,
 }): JSX.Element => {
   const context = useThemeUI();
   const { colorMode, setColorMode } = context;
@@ -44,6 +46,8 @@ export const LinksBellow: React.FC<IProps> = ({
                 sx={{ fontSize: [4, 5, 5, 5, 6, 4, 4] }}
                 onClick={() => {
                   onClick(link);
+
+                  setDisplayLinks(!displayLinks);
                 }}
               >
                 {link}
