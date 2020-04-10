@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex, Image, Box } from "rebass";
 
 import { CustomCard } from "../../components/customCard";
@@ -10,6 +10,10 @@ import quality from "./images/quality.png";
 interface IProps {}
 
 const About: React.FC<IProps> = (): JSX.Element => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Flex
       flexWrap="wrap"

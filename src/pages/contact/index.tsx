@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex } from "rebass";
 
 interface IProps {}
 const Contact: React.FC<IProps> = (): JSX.Element => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Flex
       justifyContent="flex-start"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex, Image, Card } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
@@ -20,6 +20,10 @@ const Home = withRouter(
   ({ history, ...props }: IProps): JSX.Element => {
     // const context = useThemeUI();
     // const { colorMode } = context;
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
     const clickedIndexService = () => {
       history.push("/services");

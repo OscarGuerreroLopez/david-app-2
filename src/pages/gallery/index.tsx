@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex, Image, Text } from "rebass";
 
 import garage from "./images/garage_door_small.jpg";
@@ -13,6 +13,10 @@ interface ItemProps {
 }
 
 const Item: React.FC<ItemProps> = ({ imageName }): JSX.Element => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Flex
       justifyContent="center"

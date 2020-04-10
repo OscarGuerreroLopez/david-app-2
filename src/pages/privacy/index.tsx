@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex, Card, Image } from "rebass";
 
 interface IProps {}
 const Privacy: React.FC<IProps> = (): JSX.Element => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Flex>
       <Card width={["auto"]} mx="auto">

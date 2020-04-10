@@ -52,6 +52,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
     };
 
     getData();
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -115,8 +116,8 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         <Flex
           width={["100%", "100%", "100%", "100%", "100%", "33.3%", "33.3%"]}
           flexWrap="wrap"
-          pl={["", "0", "0", "0", "0", "2", "2"]}
-          pr={["", "0", "0", "0", "0", "2", "2"]}
+          pl={["0", "0", "0", "0", "0", "2", "2"]}
+          pr={["0", "0", "0", "0", "0", "2", "2"]}
         >
           <Flex width={["100%"]}>
             <CustomCard>
