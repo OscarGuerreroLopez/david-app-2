@@ -29,7 +29,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         const result = await axios.get(
           "https://public.opendatasoft.com/api/records/1.0/search/?dataset=espana-municipios&facet=communidad_autonoma&facet=provincia&facet=municipio&refine.provincia=Madrid"
         );
-        console.log(result.data.facet_groups);
+
         const municipios = _find(result.data.facet_groups, (o) => {
           return o.name === "municipio";
         });
@@ -338,8 +338,6 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         >
           {municipios1 &&
             municipios1.map((nameObj: any, index: number) => {
-              console.log(nameObj.name);
-
               return (
                 <Text width="100%" textAlign="center" key={index}>
                   {nameObj.name}
@@ -354,8 +352,6 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         >
           {municipios2 &&
             municipios2.map((nameObj: any, index: number) => {
-              console.log(nameObj.name);
-
               return (
                 <Text width="100%" textAlign="center" key={index}>
                   {nameObj.name}
@@ -370,8 +366,6 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         >
           {municipios3 &&
             municipios3.map((nameObj: any, index: number) => {
-              console.log(nameObj.name);
-
               return (
                 <Text width="100%" textAlign="center" key={index}>
                   {nameObj.name}
@@ -386,8 +380,6 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         >
           {municipios4 &&
             municipios4.map((nameObj: any, index: number) => {
-              console.log(nameObj.name);
-
               return (
                 <Text width="100%" textAlign="center" key={index}>
                   {nameObj.name}
