@@ -39,7 +39,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 0, 170, 180],
+            px: [0, 0, 0, 0, 0, 120, 180],
           }}
         >
           <Image
@@ -79,6 +79,8 @@ const Home = withRouter(
           sx={{
             px: [0, 0, 0, 0, 0, 170, 180],
             pt: 4,
+            mr: [4, 4, 4, 4, 4, 0, 0],
+            ml: [4, 4, 4, 4, 4, 0, 0],
           }}
         >
           <Card

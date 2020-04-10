@@ -215,7 +215,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
             src={locksmith}
             sx={{
               width: ["100%"],
-              height: ["auto"],
+              height: ["100%"],
               filter: "grayscale(100%)",
             }}
             alt="Automatismos Dros"

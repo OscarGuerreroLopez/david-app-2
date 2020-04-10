@@ -69,6 +69,7 @@ export const LinksBellow: React.FC<IProps> = ({
           }}
           onClick={() => {
             setColorMode(colorMode === "default" ? "dark" : "default");
+            setDisplayLinks(!displayLinks);
           }}
         >
           <Text sx={{ fontSize: [4, 5, 5, 5, 6, 4, 4] }}>
