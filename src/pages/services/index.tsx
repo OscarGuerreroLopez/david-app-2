@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import { Flex, Image } from "rebass";
+import React, { useEffect, useState } from "react";
+import { Flex, Image, Text } from "rebass";
 import axios from "axios";
 import { find as _find } from "lodash";
 import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";
 
 import garage from "./images/garage_door_small.jpg";
-import gate1 from "./images/gate1.png";
+// import gate1 from "./images/gate1.png";
 import remote from "./images/remote.png";
 import repairs from "./images/repairs.png";
 import maintenance from "./images/maintenance.png";
-import lock from "./images/lock.jpg";
+// import lock from "./images/lock.jpg";
 import aperturas from "./images/aperturas.png";
 import cerrajeria from "./images/cerrajeria.png";
 import reparaciones from "./images/reparaciones.png";
@@ -19,6 +19,10 @@ import locksmith from "./images/residential-locksmith.jpg";
 interface IProps {}
 
 const Services: React.FC<IProps> = (): JSX.Element => {
+  const [municipios1, setMunicipios1] = useState([]);
+  const [municipios2, setMunicipios2] = useState([]);
+  const [municipios3, setMunicipios3] = useState([]);
+  const [municipios4, setMunicipios4] = useState([]);
   useEffect(() => {
     const getData = async (): Promise<any> => {
       try {
@@ -30,7 +34,18 @@ const Services: React.FC<IProps> = (): JSX.Element => {
           return o.name === "municipio";
         });
 
-        console.log(municipios.facets);
+        const names = municipios.facets.filter(
+          (municipio: any) => municipio.name !== "Madrid"
+        );
+        const names1 = names.slice(0, 50);
+        const names2 = names.slice(50, 100);
+        const names3 = names.slice(100, 150);
+        const names4 = names.slice(150, 200);
+
+        setMunicipios1(names1);
+        setMunicipios2(names2);
+        setMunicipios3(names3);
+        setMunicipios4(names4);
       } catch (error) {
         console.log("!!!", error);
       }
@@ -43,7 +58,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
     <Flex
       flexWrap="wrap"
       sx={{
-        px: [0, 0, 0, 0, 0, 170, 180],
+        px: [0, 0, 0, 0, 0, 70, 120],
       }}
     >
       <Image
@@ -70,7 +85,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         </CustomCard>
       </Flex> */}
       <Flex flexWrap="wrap" pt="4">
-        <Flex width={["100%", "100%", "100%", "100%", "100%", "70%", "70%"]}>
+        <Flex width={["100%", "100%", "100%", "100%", "100%", "100%", "100%"]}>
           <CustomCard>
             <Content
               title={"Automatismos para puertas"}
@@ -81,7 +96,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
             />
           </CustomCard>
         </Flex>
-        <Flex
+        {/* <Flex
           width={["100%", "100%", "100%", "100%", "100%", "30%", "30%"]}
           bg="orange"
         >
@@ -93,7 +108,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
             }}
             alt="Automatismos Dros"
           />
-        </Flex>
+        </Flex> */}
       </Flex>
 
       <Flex flexWrap="wrap" pt="4" width={["100%"]}>
@@ -109,8 +124,8 @@ const Services: React.FC<IProps> = (): JSX.Element => {
                 <Image
                   src={repairs}
                   sx={{
-                    width: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
-                    height: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
+                    width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
+                    height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
                   }}
                   alt="Automatismos Dros"
                 />
@@ -138,8 +153,8 @@ const Services: React.FC<IProps> = (): JSX.Element => {
                 <Image
                   src={remote}
                   sx={{
-                    width: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
-                    height: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
+                    width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
+                    height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
                   }}
                   alt="Automatismos Dros"
                 />
@@ -166,8 +181,8 @@ const Services: React.FC<IProps> = (): JSX.Element => {
                 <Image
                   src={maintenance}
                   sx={{
-                    width: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
-                    height: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
+                    width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
+                    height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
                   }}
                   alt="Automatismos Dros"
                 />
@@ -195,14 +210,12 @@ const Services: React.FC<IProps> = (): JSX.Element => {
             />
           </CustomCard>
         </Flex>
-        <Flex
-          width={["100%", "100%", "100%", "100%", "100%", "30%", "30%"]}
-          bg="orange"
-        >
+        <Flex width={["100%", "100%", "100%", "100%", "100%", "30%", "30%"]}>
           <Image
-            src={lock}
+            src={locksmith}
             sx={{
               width: ["100%"],
+              height: ["auto"],
               filter: "grayscale(100%)",
             }}
             alt="Automatismos Dros"
@@ -222,8 +235,8 @@ const Services: React.FC<IProps> = (): JSX.Element => {
                 <Image
                   src={aperturas}
                   sx={{
-                    width: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
-                    height: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
+                    width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
+                    height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
                   }}
                   alt="Automatismos Dros"
                 />
@@ -252,8 +265,8 @@ const Services: React.FC<IProps> = (): JSX.Element => {
                 <Image
                   src={cerrajeria}
                   sx={{
-                    width: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
-                    height: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
+                    width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
+                    height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
                   }}
                   alt="Cerrajería"
                 />
@@ -281,8 +294,8 @@ const Services: React.FC<IProps> = (): JSX.Element => {
                 <Image
                   src={reparaciones}
                   sx={{
-                    width: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
-                    height: ["20%", "20%", "20%", "20%", "25%", "50%", "50%"],
+                    width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
+                    height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
                   }}
                   alt="Automatismos Dros"
                 />
@@ -298,7 +311,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
           </Flex>
         </Flex>
       </Flex>
-      <Image
+      {/* <Image
         src={locksmith}
         sx={{
           width: ["100%"],
@@ -307,7 +320,82 @@ const Services: React.FC<IProps> = (): JSX.Element => {
           pt: "4",
         }}
         alt="Automatismos Dros"
-      />
+      /> */}
+
+      <Flex flexWrap="wrap" pt="4" width={["100%"]} justifyContent="center">
+        <Text
+          fontSize={[3, 3, 4, 4, 4, 5, 5]}
+          fontWeight="bold"
+          textAlign="center"
+          width="100%"
+        >
+          Municipios en los que trabajamos:
+        </Text>
+        <Flex
+          flexWrap="wrap"
+          width={["100%", "100%", "100%", "100%", "100%", "25%", "25%"]}
+          justifyContent="center"
+        >
+          {municipios1 &&
+            municipios1.map((nameObj: any, index: number) => {
+              console.log(nameObj.name);
+
+              return (
+                <Text width="100%" textAlign="center" key={index}>
+                  {nameObj.name}
+                </Text>
+              );
+            })}
+        </Flex>
+        <Flex
+          flexWrap="wrap"
+          width={["100%", "100%", "100%", "100%", "100%", "25%", "25%"]}
+          justifyContent="center"
+        >
+          {municipios2 &&
+            municipios2.map((nameObj: any, index: number) => {
+              console.log(nameObj.name);
+
+              return (
+                <Text width="100%" textAlign="center" key={index}>
+                  {nameObj.name}
+                </Text>
+              );
+            })}
+        </Flex>
+        <Flex
+          flexWrap="wrap"
+          width={["100%", "100%", "100%", "100%", "100%", "25%", "25%"]}
+          justifyContent="center"
+        >
+          {municipios3 &&
+            municipios3.map((nameObj: any, index: number) => {
+              console.log(nameObj.name);
+
+              return (
+                <Text width="100%" textAlign="center" key={index}>
+                  {nameObj.name}
+                </Text>
+              );
+            })}
+        </Flex>
+        <Flex
+          flexWrap="wrap"
+          width={["100%", "100%", "100%", "100%", "100%", "25%", "25%"]}
+          justifyContent="center"
+        >
+          {municipios4 &&
+            municipios4.map((nameObj: any, index: number) => {
+              console.log(nameObj.name);
+
+              return (
+                <Text width="100%" textAlign="center" key={index}>
+                  {nameObj.name}
+                </Text>
+              );
+            })}
+        </Flex>
+      </Flex>
     </Flex>
   );
 };
