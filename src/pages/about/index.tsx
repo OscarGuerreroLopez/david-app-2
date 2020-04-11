@@ -102,6 +102,7 @@ const About: React.FC<IProps> = (): JSX.Element => {
                 width: ["100%"],
                 borderRadius: 8,
               }}
+              alt="Automatismos Dros"
             />
           </Box>
           <Box p={1} pr={[0, 2, 3, 4, 5, 5, 0]}>
@@ -111,6 +112,7 @@ const About: React.FC<IProps> = (): JSX.Element => {
                 width: ["100%"],
                 borderRadius: 8,
               }}
+              alt="Automatismos Dros"
             />
           </Box>
         </Flex>

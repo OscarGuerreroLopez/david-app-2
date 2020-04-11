@@ -12,9 +12,9 @@ export const LittleImage: React.FC<IProps> = ({ picture }): JSX.Element => {
         sx={{
           width: 68,
           height: 68,
-          borderRadius: 9
+          borderRadius: 9,
         }}
-        alt={picture}
+        alt="Automatismos Dros"
       />
     </Box>
   );

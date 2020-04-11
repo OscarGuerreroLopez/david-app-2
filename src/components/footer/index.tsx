@@ -94,6 +94,7 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
                 window.scrollTo(0, 0);
               }
             }}
+            alt="Automatismos Dros"
           />
         </Flex>
 
@@ -154,9 +155,12 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
                 });
               } catch (error) {
                 // just a fallback for older browsers
+                console.log("@@@@", error);
+
                 window.scrollTo(0, 0);
               }
             }}
+            alt="Automatismos Dros"
           />
         </Flex>
       </Flex>

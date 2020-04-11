@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Flex, Image, Card } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 // import { useThemeUI } from "theme-ui";
 
@@ -9,6 +10,7 @@ import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
 import { ContactMini } from "./contactMini";
 import { MobileBanner } from "./mobileBanner";
+import { GetPageInfo } from "../../utils/getPageInfo";
 
 import garage from "./images/garage_door_med.jpg";
 import rapeco from "./images/rapeco.png";
@@ -17,13 +19,23 @@ import allBrands from "./images/allBrands.png";
 interface IProps extends RouteComponentProps {}
 
 const Home = withRouter(
-  ({ history, ...props }: IProps): JSX.Element => {
+  ({ history, match, ...props }: IProps): JSX.Element => {
     // const context = useThemeUI();
     // const { colorMode } = context;
 
+    const [pageTitle, setPageTitle] = useState("");
+    const [pageMeta, setPageMeta] = useState("");
+
     useEffect(() => {
       window.scrollTo(0, 0);
-    }, []);
+      const town = GetPageInfo(match.path);
+
+      setPageTitle(`Automatismos y cerrajeria en ${town}`);
+      setPageMeta(`Automatismos y cerrajeria en ${town}`);
+    }, [match.path]);
+
+    console.log("@@@@@", pageTitle);
+    console.log("@@@@@", pageMeta);
 
     const clickedIndexService = () => {
       history.push("/services");
@@ -39,6 +51,10 @@ const Home = withRouter(
 
     return (
       <>
+        <Helmet>
+          <title>{pageTitle}</title>
+          <meta name="description" content={pageMeta} />
+        </Helmet>
         <Flex
           justifyContent="flex-start"
           sx={{

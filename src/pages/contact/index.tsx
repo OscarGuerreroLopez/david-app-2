@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Flex, Image, Text } from "rebass";
+import { Flex, Image, Text, Link } from "rebass";
 
 import { CustomCard } from "../../components/customCard";
 // import { Content } from "../../components/cardContent";
@@ -12,7 +12,8 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
     window.scrollTo(0, 0);
   }, []);
 
-  // const heightSize = [80, 90, 120, 160, 180, 180, 180];
+  const number = "34622450008";
+  const message = "Que pasa gilipollas?";
 
   return (
     <Flex
@@ -32,7 +33,7 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
         >
           <CustomCard>
             <Text
-              fontSize={[3, 3, 4, 4, 4, 5, 5]}
+              fontSize={[5, 5, 5, 5, 5, 6, 6]}
               fontWeight="bold"
               textAlign="center"
             >
@@ -40,7 +41,7 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
             </Text>
             <Text
               p={1}
-              fontSize={[2, 2, 2, 2, 3, 3, 4]}
+              fontSize={[3, 3, 3, 4, 4, 5, 5]}
               fontWeight="bold"
               textAlign="center"
             >
@@ -49,38 +50,50 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
 
             <Text
               p={1}
-              fontSize={[2, 2, 2, 2, 3, 3, 4]}
+              fontSize={[3, 3, 3, 4, 4, 5, 5]}
               fontWeight="bold"
               textAlign="center"
             >
               Telefono:
             </Text>
-            <Text p={1} fontSize={[2, 2, 2, 2, 3, 3, 4]} textAlign="center">
-              <Text>622 333 111</Text>
+            <Text p={1} fontSize={[4, 4, 4, 5, 5, 6, 6]} textAlign="center">
+              <Link
+                href="tel:+34-622-450-008"
+                sx={{ textDecoration: "none", color: "primary " }}
+              >
+                <Text>622 333 111</Text>
+              </Link>
             </Text>
             <br />
             <Flex justifyContent="center">
-              <Image
-                src={whatsapp}
-                sx={{
-                  maxHeight: [80, 80, 80, 80, 80, 80, 80],
-                }}
-                alt="Automatismos Dros"
-              />
+              <Link
+                href={`https://api.whatsapp.com/send?phone=${number}&text=%20${message}`}
+              >
+                <Image
+                  src={whatsapp}
+                  sx={{
+                    maxHeight: [80, 80, 80, 80, 80, 80, 80],
+                  }}
+                  alt="Automatismos Dros"
+                />
+              </Link>
             </Flex>
             <br />
             <Text
               p={1}
               fontWeight="bold"
-              fontSize={[2, 2, 2, 2, 3, 3, 4]}
+              fontSize={[3, 3, 3, 4, 4, 5, 5]}
               textAlign="center"
             >
               Correo Electronico:
             </Text>
-            <Text p={1} fontSize={[2, 2, 2, 2, 3, 3, 4]} textAlign="center">
-              <a href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=Mira que eres tonto tu, como vaya te doy de hostias">
-                <Text color="primary">automatismos.dros@gmail.com</Text>
-              </a>
+            <Text p={1} fontSize={[3, 3, 3, 4, 4, 5, 5]} textAlign="center">
+              <Link
+                href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=Mira que eres tonto tu, como vaya te doy de hostias"
+                sx={{ textDecoration: "none", color: "primary " }}
+              >
+                <Text>automatismos.dros@gmail.com</Text>
+              </Link>
             </Text>
           </CustomCard>
         </Flex>

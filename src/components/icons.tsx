@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Flex, Box, Card, Image } from "rebass";
+import { Flex, Box, Card, Image, Link } from "rebass";
 
 import WhatsApp2 from "./images/whatsapp3.png";
 import WhatsApp1 from "./images/whatsapp2.png";
@@ -27,7 +27,7 @@ export const Icons: React.FC<IProps> = () => {
     >
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <a
+          <Link
             href={`https://api.whatsapp.com/send?phone=${number}&text=%20${message}`}
           >
             <Image
@@ -37,12 +37,12 @@ export const Icons: React.FC<IProps> = () => {
               }}
               alt="Automatismos Dros"
             />
-          </a>
+          </Link>
         </Card>
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <a href="tel:+34-622-450-008">
+          <Link href="tel:+34-622-450-008">
             <Image
               src={Calling}
               sx={{
@@ -50,12 +50,12 @@ export const Icons: React.FC<IProps> = () => {
               }}
               alt="Automatismos Dros"
             />
-          </a>
+          </Link>
         </Card>
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <a href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=Mira que eres tonto tu, como vaya te doy de hostias">
+          <Link href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=Mira que eres tonto tu, como vaya te doy de hostias">
             <Image
               src={Envelope}
               sx={{
@@ -63,7 +63,7 @@ export const Icons: React.FC<IProps> = () => {
               }}
               alt="Automatismos Dros"
             />
-          </a>
+          </Link>
         </Card>
       </Box>
     </Flex>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Flex, Image, Text } from "rebass";
-import axios from "axios";
-import { find as _find } from "lodash";
+// import axios from "axios";
+// import { find as _find } from "lodash";
 import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";
 
@@ -19,39 +19,36 @@ import locksmith from "./images/residential-locksmith.jpg";
 interface IProps {}
 
 const Services: React.FC<IProps> = (): JSX.Element => {
-  const [municipios1, setMunicipios1] = useState([]);
-  const [municipios2, setMunicipios2] = useState([]);
-  const [municipios3, setMunicipios3] = useState([]);
-  const [municipios4, setMunicipios4] = useState([]);
   useEffect(() => {
-    const getData = async (): Promise<any> => {
-      try {
-        const result = await axios.get(
-          "https://public.opendatasoft.com/api/records/1.0/search/?dataset=espana-municipios&facet=communidad_autonoma&facet=provincia&facet=municipio&refine.provincia=Madrid"
-        );
+    // const getData = async (): Promise<any> => {
+    //   try {
+    //     const result = await axios.get(
+    //       "https://public.opendatasoft.com/api/records/1.0/search/?dataset=espana-municipios&facet=communidad_autonoma&facet=provincia&facet=municipio&refine.provincia=Madrid"
+    //     );
 
-        const municipios = _find(result.data.facet_groups, (o) => {
-          return o.name === "municipio";
-        });
+    //     const municipios = _find(result.data.facet_groups, (o) => {
+    //       return o.name === "municipio";
+    //     });
 
-        const names = municipios.facets.filter(
-          (municipio: any) => municipio.name !== "Madrid"
-        );
-        const names1 = names.slice(0, 50);
-        const names2 = names.slice(50, 100);
-        const names3 = names.slice(100, 150);
-        const names4 = names.slice(150, 200);
+    //     const names = municipios.facets.filter(
+    //       (municipio: any) => municipio.name !== "Madrid"
+    //     );
+    //     const names1 = names.slice(0, 50);
+    //     const names2 = names.slice(50, 100);
+    //     const names3 = names.slice(100, 150);
+    //     const names4 = names.slice(150, 200);
 
-        setMunicipios1(names1);
-        setMunicipios2(names2);
-        setMunicipios3(names3);
-        setMunicipios4(names4);
-      } catch (error) {
-        console.log("!!!", error);
-      }
-    };
+    //     setMunicipios1(names1);
+    //     setMunicipios2(names2);
+    //     setMunicipios3(names3);
+    //     setMunicipios4(names4);
+    //   } catch (error) {
+    //     console.log("!!!", error);
+    //   }
+    // };
 
-    getData();
+    // getData();
+
     window.scrollTo(0, 0);
   }, []);
 
@@ -323,7 +320,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         alt="Automatismos Dros"
       /> */}
 
-      <Flex flexWrap="wrap" pt="4" width={["100%"]} justifyContent="center">
+      {/* <Flex flexWrap="wrap" pt="4" width={["100%"]} justifyContent="center">
         <Text
           fontSize={[3, 3, 4, 4, 4, 5, 5]}
           fontWeight="bold"
@@ -388,7 +385,7 @@ const Services: React.FC<IProps> = (): JSX.Element => {
               );
             })}
         </Flex>
-      </Flex>
+      </Flex> */}
     </Flex>
   );
 };
