@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Flex, Image, Card } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -11,6 +11,7 @@ import { IndexBrands } from "./brandsIntro";
 import { ContactMini } from "./contactMini";
 import { MobileBanner } from "./mobileBanner";
 import { GetPageInfo } from "../../utils/getPageInfo";
+import { LocationContext } from "../../utils/locationContext";
 
 import garage from "./images/garage_door_med.jpg";
 import rapeco from "./images/rapeco.png";
@@ -25,17 +26,15 @@ const Home = withRouter(
 
     const [pageTitle, setPageTitle] = useState("");
     const [pageMeta, setPageMeta] = useState("");
+    // const { value, setValue } = useContext(LocationContext);
 
     useEffect(() => {
       window.scrollTo(0, 0);
       const town = GetPageInfo(match.path);
 
       setPageTitle(`Automatismos y cerrajeria en ${town}`);
-      setPageMeta(`Automatismos y cerrajeria en ${town}`);
+      setPageMeta(`Automatismos y cerrajeria en ${town}. Telf: 622 799 888`);
     }, [match.path]);
-
-    console.log("@@@@@", pageTitle);
-    console.log("@@@@@", pageMeta);
 
     const clickedIndexService = () => {
       history.push("/services");
