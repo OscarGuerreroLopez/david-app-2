@@ -17,7 +17,6 @@ const Privacy = lazy(() => import("../pages/privacy"));
 const Router = () => {
   const municipiosEste = Object.keys(routes.MunicipiosEste);
   const municipiosNordEste = Object.keys(routes.MunicipiosNordEste);
-  console.log(municipiosEste);
 
   return (
     <BrowserRouter>

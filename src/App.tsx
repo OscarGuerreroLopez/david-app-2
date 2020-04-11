@@ -1,42 +1,19 @@
-import React, {
-  Dispatch,
-  SetStateAction,
-  useMemo,
-  useState,
-  createContext,
-} from "react";
+import React, { useMemo, useState } from "react";
 import { ThemeProvider } from "theme-ui";
 import { theme } from "./styles";
-// import {
-//   LocationContext,
-//   InitialLocation,
-//   ILocation,
-// } from "./utils/locationContext";
+import {
+  LocationContext,
+  initialLocation,
+  ILocation,
+  ILocationProvider,
+} from "./utils/locationContext";
 
 import Router from "./router";
 
-interface ILocation {
-  path: string;
-  town: string;
-}
-interface ILocation2 {
-  location: ILocation;
-  setLocation: Dispatch<SetStateAction<ILocation>>;
-}
-
-const initialLocation = {
-  path: "",
-  town: "",
-};
-
-export const LocationContext = createContext<ILocation2>({
-  location: initialLocation,
-  setLocation: () => {},
-});
 function App() {
   const [location, setLocation] = useState<ILocation>(initialLocation);
 
-  const providerLocationValue: ILocation2 = useMemo(
+  const providerLocationValue: ILocationProvider = useMemo(
     () => ({ location, setLocation }),
     [location, setLocation]
   );

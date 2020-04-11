@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Flex, Image, Text } from "rebass";
+import React, { useEffect } from "react";
+import { Flex, Image } from "rebass";
 // import axios from "axios";
 // import { find as _find } from "lodash";
 import { CustomCard } from "../../components/customCard";

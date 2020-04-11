@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Flex } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
@@ -11,6 +11,7 @@ import light from "./images/logo7.png";
 import dark from "./images/logo8.png";
 
 import { useThemeUI } from "theme-ui";
+import { LocationContext } from "../../utils/locationContext";
 
 export interface IObjectLiteral {
   [key: string]: string;
@@ -25,6 +26,8 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
     Contacto: "contact",
     Galeria: "gallery",
   };
+  const { location } = useContext(LocationContext);
+
   const [displayLinks, setDisplayLinks] = useState(false);
   const context = useThemeUI();
   const { colorMode } = context;
@@ -34,7 +37,7 @@ const Nav = withRouter(({ history, ...props }: IProps) => {
   };
 
   const onClickLogoLeft = () => {
-    history.push("/");
+    history.push(location.path || "/");
   };
 
   return (

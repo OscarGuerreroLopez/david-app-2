@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Flex, Image, Card } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -24,17 +24,15 @@ const Home = withRouter(
     // const context = useThemeUI();
     // const { colorMode } = context;
 
-    const [pageTitle, setPageTitle] = useState("");
-    const [pageMeta, setPageMeta] = useState("");
-    // const { value, setValue } = useContext(LocationContext);
+    const { location, setLocation } = useContext(LocationContext);
 
     useEffect(() => {
       window.scrollTo(0, 0);
+      const path = match.path;
       const town = GetPageInfo(match.path);
 
-      setPageTitle(`Automatismos y cerrajeria en ${town}`);
-      setPageMeta(`Automatismos y cerrajeria en ${town}. Telf: 622 799 888`);
-    }, [match.path]);
+      setLocation({ path, town });
+    }, [match.path, setLocation]);
 
     const clickedIndexService = () => {
       history.push("/services");
@@ -51,8 +49,11 @@ const Home = withRouter(
     return (
       <>
         <Helmet>
-          <title>{pageTitle}</title>
-          <meta name="description" content={pageMeta} />
+          <title>Automatismos y cerrajeria en {location.town}</title>
+          <meta
+            name="description"
+            content={`Automatismos y cerrajeria en ${location.town}. Telf: 622 799 888`}
+          />
         </Helmet>
         <Flex
           justifyContent="flex-start"
@@ -72,7 +73,8 @@ const Home = withRouter(
           />
         </Flex>
         <br />
-        <MobileBanner />
+
+        <MobileBanner town={location.town} />
         <br />
         <Flex
           justifyContent="flex-start"

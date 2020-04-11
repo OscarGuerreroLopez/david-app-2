@@ -1,17 +1,20 @@
-import { createContext } from "react";
+import { createContext, Dispatch, SetStateAction } from "react";
 
 export interface ILocation {
-  location: {
-    path: string;
-    townName: string;
-  };
+  path: string;
+  town: string;
+}
+export interface ILocationProvider {
+  location: ILocation;
+  setLocation: Dispatch<SetStateAction<ILocation>>;
 }
 
-export const InitialLocation: ILocation = {
-  location: {
-    path: "",
-    townName: "",
-  },
+export const initialLocation: ILocation = {
+  path: "",
+  town: "",
 };
 
-export const LocationContext = createContext<ILocation>(InitialLocation);
+export const LocationContext = createContext<ILocationProvider>({
+  location: initialLocation,
+  setLocation: () => {},
+});

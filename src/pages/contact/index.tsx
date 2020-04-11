@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Flex, Image, Text, Link } from "rebass";
 
 import { CustomCard } from "../../components/customCard";
+import { LocationContext } from "../../utils/locationContext";
+
 // import { Content } from "../../components/cardContent";
 
 import whatsapp from "./whatsapp.png";
 
 interface IProps {}
 const Contact: React.FC<IProps> = (): JSX.Element => {
+  const { location } = useContext(LocationContext);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -46,6 +50,15 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
               textAlign="center"
             >
               Atendemos urgencias las 24h
+            </Text>
+
+            <Text
+              p={1}
+              fontSize={[3, 3, 3, 4, 4, 5, 5]}
+              fontWeight="bold"
+              textAlign="center"
+            >
+              {location.town}
             </Text>
 
             <Text
