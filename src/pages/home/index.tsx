@@ -88,7 +88,7 @@ const Home = withRouter(
             px: [0, 0, 0, 0, 0, 120, 180],
           }}
         >
-          <IndexServices onClick={clickedIndexService} />
+          <IndexServices onClick={clickedIndexService} town={location.town} />
         </Flex>
         <br />
         <Flex

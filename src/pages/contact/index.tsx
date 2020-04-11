@@ -58,7 +58,7 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
               fontWeight="bold"
               textAlign="center"
             >
-              {location.town}
+              {location.town ? `${location.town} y alrededores` : ""}
             </Text>
 
             <Text

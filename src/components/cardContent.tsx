@@ -2,8 +2,8 @@ import React from "react";
 import { Text } from "rebass";
 
 interface IContent {
-  title: string;
-  content: string;
+  title?: string;
+  content?: string;
 }
 
 export const Content: React.FC<IContent> = ({
@@ -17,7 +17,7 @@ export const Content: React.FC<IContent> = ({
         fontWeight="bold"
         textAlign="center"
       >
-        {title}:
+        {title}
       </Text>
       <Text p={1} fontSize={[2, 2, 2, 2, 3, 3, 4]}>
         {content}

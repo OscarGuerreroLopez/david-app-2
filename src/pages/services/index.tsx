@@ -6,7 +6,7 @@ import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";
 
 import garage from "./images/garage_door_small.jpg";
-// import gate1 from "./images/gate1.png";
+import gate1 from "./images/gate1.jpg";
 import remote from "./images/remote.png";
 import repairs from "./images/repairs.png";
 import maintenance from "./images/maintenance.png";
@@ -20,35 +20,6 @@ interface IProps {}
 
 const Services: React.FC<IProps> = (): JSX.Element => {
   useEffect(() => {
-    // const getData = async (): Promise<any> => {
-    //   try {
-    //     const result = await axios.get(
-    //       "https://public.opendatasoft.com/api/records/1.0/search/?dataset=espana-municipios&facet=communidad_autonoma&facet=provincia&facet=municipio&refine.provincia=Madrid"
-    //     );
-
-    //     const municipios = _find(result.data.facet_groups, (o) => {
-    //       return o.name === "municipio";
-    //     });
-
-    //     const names = municipios.facets.filter(
-    //       (municipio: any) => municipio.name !== "Madrid"
-    //     );
-    //     const names1 = names.slice(0, 50);
-    //     const names2 = names.slice(50, 100);
-    //     const names3 = names.slice(100, 150);
-    //     const names4 = names.slice(150, 200);
-
-    //     setMunicipios1(names1);
-    //     setMunicipios2(names2);
-    //     setMunicipios3(names3);
-    //     setMunicipios4(names4);
-    //   } catch (error) {
-    //     console.log("!!!", error);
-    //   }
-    // };
-
-    // getData();
-
     window.scrollTo(0, 0);
   }, []);
 
@@ -68,22 +39,9 @@ const Services: React.FC<IProps> = (): JSX.Element => {
         }}
         alt="Automatismos Dros"
       />
-      {/* <Flex pt="4">
-        <CustomCard>
-          <Content
-            title={"Nuestro compromiso"}
-            content={
-              "Contamos con un equipo de trabajo que ama su oficio y que sabe lo que es esforzarse para obtener un excelente resultado final. \
-              Tenemos claro nuestros objetivos y la normativa vigente cuando de reparación de puertas automáticas se trata.\
-              En Automatismos y cerrajeria DROS entendemos que este es un sector cada día más competitivo y de reputación, por esta razón, \
-              nos esforzamos para ofrecerle calidad en cada servicio prestado, dedicándole buena parte de nuestro empeño al estudio de nuevos materiales y de efectivas soluciones de reparación de puertas automáticas de garaje y cerrajeria en general.\
-              "
-            }
-          />
-        </CustomCard>
-      </Flex> */}
+
       <Flex flexWrap="wrap" pt="4">
-        <Flex width={["100%", "100%", "100%", "100%", "100%", "100%", "100%"]}>
+        <Flex width={["100%", "100%", "100%", "100%", "100%", "70%", "70%"]}>
           <CustomCard>
             <Content
               title={"Automatismos para puertas"}
@@ -94,19 +52,17 @@ const Services: React.FC<IProps> = (): JSX.Element => {
             />
           </CustomCard>
         </Flex>
-        {/* <Flex
-          width={["100%", "100%", "100%", "100%", "100%", "30%", "30%"]}
-          bg="orange"
-        >
+        <Flex width={["100%", "100%", "100%", "100%", "100%", "30%", "30%"]}>
           <Image
             src={gate1}
             sx={{
               width: ["100%"],
+              height: ["100%"],
               filter: "grayscale(100%)",
             }}
             alt="Automatismos Dros"
           />
-        </Flex> */}
+        </Flex>
       </Flex>
 
       <Flex flexWrap="wrap" pt="4" width={["100%"]}>
