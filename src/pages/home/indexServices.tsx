@@ -22,6 +22,9 @@ export const IndexServices: React.FC<IProps> = ({ onClick, ...props }) => {
             "
           }
         />
+        <Text fontSize={[2, 2, 3, 4, 5]} fontWeight="bold" textAlign="center">
+          Presupuestos sin compromiso
+        </Text>
 
         <Flex>
           <Card width={[256, 300, 320, 340, 360, 380, 400]} mx="auto">

@@ -14,7 +14,8 @@ import { GetPageInfo } from "../../utils/getPageInfo";
 import { LocationContext } from "../../utils/locationContext";
 
 import garage from "./images/garage_door_med.jpg";
-import rapeco from "./images/rapeco.png";
+// import rapeco from "./images/rapeco.png";
+import budget from "./images/budget.png";
 import allBrands from "./images/allBrands.png";
 
 interface IProps extends RouteComponentProps {}
@@ -49,10 +50,14 @@ const Home = withRouter(
     return (
       <>
         <Helmet>
-          <title>Automatismos y cerrajeria en {location.town}</title>
+          <title>
+            Automatismos y cerrajeria en {location.town || "Madrid"}
+          </title>
           <meta
             name="description"
-            content={`Automatismos y cerrajeria en ${location.town}. Telf: 622 799 888`}
+            content={`Automatismos y cerrajeria en ${
+              location.town || "Madrid"
+            }. Telf: 622 799 888`}
           />
         </Helmet>
         <Flex
@@ -80,25 +85,25 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 0, 170, 180],
+            px: [0, 0, 0, 0, 0, 120, 180],
           }}
         >
-          <IndexAboutUs onClick={clickedIndexAbout} />
+          <IndexServices onClick={clickedIndexService} />
         </Flex>
         <br />
         <Flex
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 0, 170, 180],
+            px: [0, 0, 0, 0, 0, 120, 180],
           }}
         >
-          <IndexServices onClick={clickedIndexService} />
+          <IndexAboutUs onClick={clickedIndexAbout} />
         </Flex>
         <Flex
           flexWrap="wrap"
           sx={{
-            px: [0, 0, 0, 0, 0, 170, 180],
+            px: [0, 0, 0, 0, 0, 120, 180],
             pt: 4,
             mr: [4, 4, 4, 4, 4, 0, 0],
             ml: [4, 4, 4, 4, 4, 0, 0],
@@ -110,12 +115,13 @@ const Home = withRouter(
               textAlign: "center",
             }}
           >
-            <Image src={rapeco} alt="Automatismos Dros" />
+            <Image src={budget} alt="Automatismos Dros" />
           </Card>
           <Card
             sx={{
               width: ["100%", "100%", "100%", "100%", "100%", "50%", "50%"],
               textAlign: "center",
+              pt: 2,
             }}
           >
             <Image src={allBrands} alt="Automatismos Dros" />
@@ -125,7 +131,7 @@ const Home = withRouter(
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
-            px: [0, 0, 0, 0, 0, 170, 180],
+            px: [0, 0, 0, 0, 0, 120, 180],
             pt: 4,
           }}
         >
