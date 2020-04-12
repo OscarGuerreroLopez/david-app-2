@@ -55,10 +55,11 @@ const Home = withRouter(
           </title>
           <meta
             name="description"
-            content={`Automatismos y cerrajeria en ${
+            content={`Automatismos y Cerrajería en ${
               location.town || "Madrid"
-            }. Telf: 622 799 888`}
+            }. Telf: 606 33 32 72. Reparación puerta garage. Cerrajero urgente. Arreglo puerta corredera. Puertas automáticas.`}
           />
+          <meta name="robots" content="index, follow" />
         </Helmet>
         <Flex
           justifyContent="flex-start"
