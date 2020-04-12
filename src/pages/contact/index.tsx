@@ -18,7 +18,7 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
   }, []);
 
   const number = "34622450008";
-  const message = "Que pasa gilipollas?";
+  const message = "Me gustaria saber mas sobre vosotros";
 
   return (
     <>
@@ -114,7 +114,7 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
               </Text>
               <Text p={1} fontSize={[3, 3, 3, 4, 4, 5, 5]} textAlign="center">
                 <Link
-                  href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=Mira que eres tonto tu, como vaya te doy de hostias"
+                  href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=A la atención de Dros"
                   sx={{ textDecoration: "none", color: "primary " }}
                 >
                   <Text>automatismos.dros@gmail.com</Text>

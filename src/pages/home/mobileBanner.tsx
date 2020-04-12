@@ -1,7 +1,8 @@
 import React from "react";
 import { Flex, Text, Image } from "rebass";
 import { useThemeUI } from "theme-ui";
-import logoDark from "./images/logoDark.png";
+// import logoDark from "./images/logoDark.png";
+import logo from "./images/logo2.png";
 // import logoLight from "./images/logoLight.png";
 // import { CustomCard } from "../../components/customCard";
 
@@ -27,33 +28,35 @@ export const MobileBanner: React.FC<IProps> = ({ town }) => {
           fontWeight: "bold",
         }}
       >
+        <Text
+          sx={{
+            fontSize: [3, 4, 4, 5, 6],
+            textAlign: "center",
+            width: ["100%"],
+            fontFamily: "chewy",
+          }}
+        >
+          Automatismos y cerrajeria Dros
+        </Text>
         {town && (
           <>
             <Flex flexWrap="wrap" width={["100%"]} justifyContent="center">
               <Text
                 sx={{
-                  fontSize: [2, 3, 4, 4, 5],
-                  textAlign: "center",
-                  width: ["100%"],
-                }}
-              >
-                Automatismos y cerrajeria en:
-              </Text>
-              <Text
-                sx={{
                   fontSize: [2, 4, 4, 5, 5],
                   textAlign: "center",
                   width: ["100%"],
+                  color: "#F99173",
                 }}
               >
-                {town}
+                En {town} y alrededores
               </Text>
             </Flex>
           </>
         )}
         <Image
           // src={colorMode === "default" ? logoLight : logoDark}
-          src={logoDark}
+          src={logo}
           sx={{
             borderRadius: 8,
           }}

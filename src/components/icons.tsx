@@ -16,7 +16,7 @@ export const Icons: React.FC<IProps> = () => {
   const heightSize = [80, 90, 120, 160, 180];
 
   const number = "34622450008";
-  const message = "Que pasa gilipollas?";
+  const message = "Me gustaria saber mas sobre vosotros";
 
   return (
     <Flex
@@ -55,7 +55,7 @@ export const Icons: React.FC<IProps> = () => {
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <Link href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=Mira que eres tonto tu, como vaya te doy de hostias">
+          <Link href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=A la atención de Dros">
             <Image
               src={Envelope}
               sx={{
