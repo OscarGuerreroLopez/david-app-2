@@ -7,20 +7,21 @@ import { Content } from "../../components/cardContent";
 import team from "./images/team.svg";
 interface IProps {
   onClick: () => void;
+  town: string;
 }
 
 export const IndexAboutUs: React.FC<IProps> = ({
   onClick,
-  ...props
+  town,
 }): JSX.Element => {
+  const extraText = town ? `en ${town} y alrededores` : "";
+
   return (
     <Flex mx={0}>
       <CustomCard>
         <Content
           title={"Quienes somos"}
-          content={
-            "Con más de 30 años a su servicio, DROS es una empresa consolidada, compuesta por un equipo de profesionales competentes con una amplia experiencia personal en el mundo del automatismo, dando tambien servicios de Cerrajeria Rápida a comunidades, empresas y particulares."
-          }
+          content={`Con más de 30 años a su servicio, DROS es una empresa consolidada, compuesta por un equipo de profesionales competentes con una amplia experiencia personal en el mundo del automatismo, dando tambien servicios de Cerrajeria Rápida a comunidades, empresas y particulares ${extraText}.`}
         />
 
         <Flex>

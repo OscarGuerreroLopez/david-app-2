@@ -99,7 +99,7 @@ const Home = withRouter(
             px: [0, 0, 0, 0, 0, 120, 180],
           }}
         >
-          <IndexAboutUs onClick={clickedIndexAbout} />
+          <IndexAboutUs onClick={clickedIndexAbout} town={location.town} />
         </Flex>
         <Flex
           flexWrap="wrap"
