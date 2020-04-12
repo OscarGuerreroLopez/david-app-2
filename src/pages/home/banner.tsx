@@ -10,7 +10,7 @@ interface IProps {
   town: string;
 }
 
-export const MobileBanner: React.FC<IProps> = ({ town }) => {
+export const Banner: React.FC<IProps> = ({ town }) => {
   const context = useThemeUI();
   const { colorMode } = context;
   return (
@@ -19,7 +19,7 @@ export const MobileBanner: React.FC<IProps> = ({ town }) => {
         justifyContent="center"
         flexWrap="wrap"
         sx={{
-          "@media screen and (min-width: 1023px)": {
+          "@media screen and (max-width: 1023px)": {
             display: "none",
           },
           color: (theme) => `${colorMode === "default" ? null : "#3383FF"}`,
@@ -36,10 +36,10 @@ export const MobileBanner: React.FC<IProps> = ({ town }) => {
                   fontSize: [2, 4, 4, 5, 5],
                   textAlign: "center",
                   width: ["100%"],
-                  color: "#F99173",
+                  //   color: "#F99173",
                 }}
               >
-                En {town} y alrededores
+                Prestamos servicio en {town} y alrededores
               </Text>
             </Flex>
           </>
@@ -56,7 +56,7 @@ export const MobileBanner: React.FC<IProps> = ({ town }) => {
       <Flex
         justifyContent="center"
         sx={{
-          "@media screen and (min-width: 1023px)": {
+          "@media screen and (max-width: 1023px)": {
             display: "none",
           },
           // color: (theme) => `${colorMode === "default" ? null : "#3383FF"}`,

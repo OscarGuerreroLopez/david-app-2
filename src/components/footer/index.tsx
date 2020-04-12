@@ -116,10 +116,25 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
               <Text>Cerrajeria</Text>
             </Flex>
             <Flex width={[1]} justifyContent="center">
-              <Text>Aperturas</Text>
+              <Text>Aperturas de urgencia</Text>
             </Flex>
             <Flex width={[1]} justifyContent="center">
               <Text>Puertas de garaje</Text>
+            </Flex>
+            <Flex width={[1]} justifyContent="center">
+              <Text>Puertas automaticas</Text>
+            </Flex>
+            <Flex width={[1]} justifyContent="center">
+              <Text>Puertas correderas</Text>
+            </Flex>
+            <Flex width={[1]} justifyContent="center">
+              <Text>Puertas abatibles</Text>
+            </Flex>
+            <Flex width={[1]} justifyContent="center">
+              <Text>Instalacion motores</Text>
+            </Flex>
+            <Flex width={[1]} justifyContent="center">
+              <Text>Cambio bombillo</Text>
             </Flex>
           </Box>
         </Flex>

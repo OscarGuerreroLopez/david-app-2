@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { ThemeProvider } from "theme-ui";
+import { CookiesProvider } from "react-cookie";
+
 import { theme } from "./styles";
 import {
   LocationContext,
@@ -22,7 +24,9 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <LocationContext.Provider value={providerLocationValue}>
-          <Router />
+          <CookiesProvider>
+            <Router />
+          </CookiesProvider>
         </LocationContext.Provider>
       </ThemeProvider>
     </>

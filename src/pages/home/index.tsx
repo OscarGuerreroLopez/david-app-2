@@ -10,6 +10,7 @@ import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
 import { ContactMini } from "./contactMini";
 import { MobileBanner } from "./mobileBanner";
+import { Banner } from "./banner";
 import { GetPageInfo } from "../../utils/getPageInfo";
 import { LocationContext } from "../../utils/locationContext";
 
@@ -62,6 +63,7 @@ const Home = withRouter(
           <meta name="robots" content="index, follow" />
         </Helmet>
         <Flex
+          flexWrap="wrap"
           justifyContent="flex-start"
           sx={{
             ml: ["auto"],
@@ -81,6 +83,7 @@ const Home = withRouter(
         <br />
 
         <MobileBanner town={location.town} />
+        <Banner town={location.town} />
         <br />
         <Flex
           justifyContent="flex-start"

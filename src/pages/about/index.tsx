@@ -125,7 +125,7 @@ const About: React.FC<IProps> = (): JSX.Element => {
               <Content
                 title={"Por que confiar en nosotros?"}
                 content={
-                  "Contamos con 30 años de experiencia en el sector. Tenemos el  objetivo de conseguir la confianza de nuestros clientes, ofreciendo un servicio de alta calidad y a un precio justo."
+                  "Contamos con 25 años de experiencia en el sector. Tenemos el  objetivo de conseguir la confianza de nuestros clientes, ofreciendo un servicio de alta calidad y a un precio justo."
                 }
               />
             </CustomCard>

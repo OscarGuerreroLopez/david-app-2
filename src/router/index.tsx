@@ -4,8 +4,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Loader } from "../components/loader";
 import Nav from "../pages/nav";
 import Footer from "../components/footer";
-// import { MunicipiosEste } from "./routes";
+import { MobileTitle } from "../components/mobileTitle";
 import { routes } from "../constants";
+import { CookieWarn } from "../components/cookieWarn";
 
 const Home = lazy(() => import("../pages/home"));
 const About = lazy(() => import("../pages/about"));
@@ -22,6 +23,7 @@ const Router = () => {
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
         <Nav />
+        <MobileTitle />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
@@ -34,6 +36,7 @@ const Router = () => {
 
           <Route component={Home} />
         </Switch>
+        <CookieWarn />
         <Footer />
       </Suspense>
     </BrowserRouter>
