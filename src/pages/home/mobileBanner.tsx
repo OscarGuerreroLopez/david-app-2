@@ -36,7 +36,7 @@ export const MobileBanner: React.FC<IProps> = ({ town }) => {
                   fontSize: [2, 4, 4, 5, 5],
                   textAlign: "center",
                   width: ["100%"],
-                  color: "#F99173",
+                  // color: "#F99173",
                 }}
               >
                 En {town} y alrededores

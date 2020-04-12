@@ -16,7 +16,7 @@ export const CookieWarn = withRouter(
 
     const onClickCookies = () => {
       const cookieExp = new Date();
-      cookieExp.setMonth(cookieExp.getMonth() + 2);
+      cookieExp.setMonth(cookieExp.getMonth() + 4);
 
       setCookie("dros", "not_my_first_time", { expires: cookieExp });
     };
@@ -45,9 +45,9 @@ export const CookieWarn = withRouter(
               textAlign="center"
               width="100%"
             >
-              Esta web utiliza 'cookies' propias para ofrecerte una mejor
-              experiencia y servicio. Al navegar o utilizar nuestros servicios,
-              aceptas el uso que hacemos de las 'cookies'.
+              Esta web utiliza 'cookies' propias y de terceros para ofrecerte
+              una mejor experiencia y servicio. Al navegar o utilizar nuestros
+              servicios, aceptas el uso que hacemos de las 'cookies'.
             </Text>
             <Link
               onClick={() => {
@@ -59,7 +59,9 @@ export const CookieWarn = withRouter(
             </Link>
 
             <Flex width="100%" justifyContent="center" pt="4">
-              <Button onClick={onClickCookies}>Entendido</Button>
+              <Button color="#0F07B2" onClick={onClickCookies}>
+                Entendido
+              </Button>
             </Flex>
           </Flex>
         )}
