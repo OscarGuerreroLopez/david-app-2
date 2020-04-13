@@ -24,3 +24,19 @@ export const MunicipiosNordEste: IObjectLiteral = {
   ["/talamanca"]: "Talamanca de Jarama",
   ["/valdetorres"]: "Valdetorres de Jarama",
 };
+
+export const MunicipiosNorte: IObjectLiteral = {
+  ["/alcobendas"]: "Alcobendas",
+  ["/algete"]: "Algete",
+  ["cobena"]: "Cobeña",
+  ["/colmenar"]: "Colmenar Viejo",
+  ["/san-agustin"]: "San Agustín del Guadalix",
+  ["/sanse"]: "San Sebastián de los Reyes",
+  ["/tres-cantos"]: "Tres Cantos",
+};
+
+export const MunicipiosOeste: IObjectLiteral = {
+  ["/boadilla"]: "Boadilla del Monte",
+  ["/brunete"]: "Brunete",
+  ["/collado-villalba"]: "Collado Villalba",
+};
