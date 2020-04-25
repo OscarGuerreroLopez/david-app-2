@@ -18,6 +18,8 @@ const Privacy = lazy(() => import("../pages/privacy"));
 const Router = () => {
   const municipiosEste = Object.keys(routes.MunicipiosEste);
   const municipiosNordEste = Object.keys(routes.MunicipiosNordEste);
+  const municipiosNorte = Object.keys(routes.MunicipiosNorte);
+  const municipiosOeste = Object.keys(routes.MunicipiosOeste);
 
   return (
     <BrowserRouter>
@@ -33,6 +35,8 @@ const Router = () => {
           <Route path="/privacy" exact component={Privacy} />
           <Route path={municipiosEste} exact component={Home} />
           <Route path={municipiosNordEste} exact component={Home} />
+          <Route path={municipiosNorte} exact component={Home} />
+          <Route path={municipiosOeste} exact component={Home} />
 
           <Route component={Home} />
         </Switch>

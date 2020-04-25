@@ -28,7 +28,7 @@ export const MunicipiosNordEste: IObjectLiteral = {
 export const MunicipiosNorte: IObjectLiteral = {
   ["/alcobendas"]: "Alcobendas",
   ["/algete"]: "Algete",
-  ["cobena"]: "Cobeña",
+  ["/cobena"]: "Cobeña",
   ["/colmenar"]: "Colmenar Viejo",
   ["/san-agustin"]: "San Agustín del Guadalix",
   ["/sanse"]: "San Sebastián de los Reyes",
@@ -39,4 +39,12 @@ export const MunicipiosOeste: IObjectLiteral = {
   ["/boadilla"]: "Boadilla del Monte",
   ["/brunete"]: "Brunete",
   ["/collado-villalba"]: "Collado Villalba",
+  ["/galapagar"]: "Galapagar",
+  ["/hoyo"]: "Hoyo de Manzanares",
+  ["/majadahonda"]: "Majadahonda",
+  ["/pozuelo"]: "Pozuelo de Alarcón",
+  ["/rozas"]: "Las Rozas de Madrid",
+  ["/torrelodones"]: "Torrelodones",
+  ["/villanueva-canada"]: "Villanueva de la Cañada",
+  ["/villaviciosa"]: "Villaviciosa de Odón",
 };
