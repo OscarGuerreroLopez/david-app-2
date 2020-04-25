@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Text, Image, Link } from "rebass";
 import { useThemeUI } from "theme-ui";
 // import logoDark from "./images/logoDark.png";
-import logo from "./images/logo2.png";
+import logo from "./images/logoDark.png";
 // import logoLight from "./images/logoLight.png";
 // import { CustomCard } from "../../components/customCard";
 
