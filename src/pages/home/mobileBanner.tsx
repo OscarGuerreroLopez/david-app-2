@@ -44,38 +44,6 @@ export const MobileBanner: React.FC<IProps> = ({ town }) => {
             </Flex>
           </>
         )}
-        <Image
-          // src={colorMode === "default" ? logoLight : logoDark}
-          src={logo}
-          sx={{
-            borderRadius: 8,
-          }}
-          alt="Automatismos y cerrajeria Dros"
-        />
-      </Flex>
-      <Flex
-        justifyContent="center"
-        sx={{
-          "@media screen and (min-width: 1023px)": {
-            display: "none",
-          },
-          // color: (theme) => `${colorMode === "default" ? null : "#3383FF"}`,
-          color: "#3383FF",
-        }}
-      >
-        <Text
-          sx={{
-            fontSize: [2, 4, 4, 5, 6],
-            fontWeight: "bold",
-          }}
-        >
-          <Link
-            href="tel:+34-622-450-008"
-            sx={{ textDecoration: "none", color: "primary " }}
-          >
-            Telf: 622 999 888
-          </Link>
-        </Text>
       </Flex>
     </>
   );
