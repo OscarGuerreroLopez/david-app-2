@@ -15,7 +15,7 @@ export const Icons: React.FC<IProps> = () => {
   const context = useThemeUI();
   const heightSize = [80, 90, 120, 160, 180];
 
-  const number = "34622450008";
+  const number = "34606333272";
   const message = "Me gustaria saber mas sobre vosotros";
 
   return (
@@ -42,7 +42,7 @@ export const Icons: React.FC<IProps> = () => {
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <Link href="tel:+34-622-450-008">
+          <Link href="tel:+34-606-33-32-72">
             <Image
               src={Calling}
               sx={{
@@ -55,7 +55,7 @@ export const Icons: React.FC<IProps> = () => {
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <Link href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=A la atención de Dros">
+          <Link href="mailto:davidjandro@hotmail.com?subject=Solicitud para Dros&body=A la atención de Dros">
             <Image
               src={Envelope}
               sx={{

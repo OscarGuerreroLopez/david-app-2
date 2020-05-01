@@ -19,6 +19,7 @@ export const MetaTags: React.FC<IProps> = (): JSX.Element => {
         }. Telf: 606 33 32 72. Reparación puerta garage. Cerrajero urgente. Arreglo puerta corredera. Puertas automáticas.`}
       />
       <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://david-app-2.now.sh/" />
     </Helmet>
   );
 };

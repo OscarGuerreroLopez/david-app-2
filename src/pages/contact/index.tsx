@@ -17,7 +17,7 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
     window.scrollTo(0, 0);
   }, []);
 
-  const number = "34622450008";
+  const number = "34606333272";
   const message = "Me gustaria saber mas sobre vosotros";
 
   return (
@@ -114,34 +114,14 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
               </Text>
               <Text p={1} fontSize={[3, 3, 3, 4, 4, 5, 5]} textAlign="center">
                 <Link
-                  href="mailto:oscarlopez75@gmail.com?subject=Solicitud para Dros&body=A la atención de Dros"
+                  href="mailto:davidjandro@hotmail.com?subject=Solicitud para Dros&body=A la atención de Dros"
                   sx={{ textDecoration: "none", color: "primary " }}
                 >
-                  <Text>automatismos.dros@gmail.com</Text>
+                  <Text>davidjandro@hotmail.com</Text>
                 </Link>
               </Text>
             </CustomCard>
           </Flex>
-          {/* <Flex
-          justifyContent="center"
-          width={["100%", "100%", "100%", "100%", "100%", "33.3%", "33.3%"]}
-          px={["0", "0", "0", "0", "0", "2", "2"]}
-          py="2"
-        >
-          <CustomCard>
-            <Content title={"Telefono"} content={"699 222 333"} />
-          </CustomCard>
-        </Flex>
-        <Flex
-          justifyContent="center"
-          width={["100%", "100%", "100%", "100%", "100%", "33.3%", "33.3%"]}
-          px={["0", "0", "0", "0", "0", "2", "2"]}
-          py="2"
-        >
-          <CustomCard>
-            <Content title={"Email"} content={"automatismos.dros@gmail.com"} />
-          </CustomCard>
-        </Flex> */}
         </Flex>
       </Flex>
     </>

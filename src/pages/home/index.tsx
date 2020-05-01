@@ -1,10 +1,9 @@
 import React, { useEffect, useContext } from "react";
 import { Flex, Image, Card, Box, Text } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { useThemeUI } from "theme-ui";
 
-// import { useThemeUI } from "theme-ui";
-
+import { MetaTags } from "../../components/metaTags";
 import { IndexAboutUs } from "./indexAboutUs";
 import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
@@ -22,8 +21,8 @@ interface IProps extends RouteComponentProps {}
 
 const Home = withRouter(
   ({ history, match, ...props }: IProps): JSX.Element => {
-    // const context = useThemeUI();
-    // const { colorMode } = context;
+    const context = useThemeUI();
+    const { colorMode } = context;
 
     const { location, setLocation } = useContext(LocationContext);
 
@@ -49,18 +48,7 @@ const Home = withRouter(
 
     return (
       <>
-        <Helmet>
-          <title>
-            Automatismos y cerrajeria en {location.town || "Madrid"}
-          </title>
-          <meta
-            name="description"
-            content={`Automatismos y Cerrajería en ${
-              location.town || "Madrid"
-            }. Telf: 606 33 32 72. Reparación puerta garage. Cerrajero urgente. Arreglo puerta corredera. Puertas automáticas.`}
-          />
-          <meta name="robots" content="index, follow" />
-        </Helmet>
+        <MetaTags />
         <Flex
           flexWrap="wrap"
           justifyContent="flex-start"
@@ -87,7 +75,11 @@ const Home = withRouter(
               backgroundSize: "cover",
               justifyContent: "center",
               alignContent: "center",
-              filter: "grayscale(100%)",
+              filter: (theme) =>
+                `${
+                  colorMode === "default" ? "grayscale(0%)" : "grayscale(100%)"
+                }`,
+              // filter: "grayscale(100%)",
             }}
           >
             <Flex

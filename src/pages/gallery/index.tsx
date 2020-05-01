@@ -9,7 +9,6 @@ import automatismo3 from "./images/automatismos3.jpeg";
 import automatismo4 from "./images/automatismos4.jpg";
 import automatismo5 from "./images/automatismos5.jpg";
 import locksmith1 from "./images/locksmith1.jpg";
-import locksmith2 from "./images/locksmith2.jpg";
 import locksmith3 from "./images/locksmith3.jpeg";
 import locksmith4 from "./images/locksmith4.jpeg";
 
