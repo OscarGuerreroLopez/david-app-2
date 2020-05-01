@@ -48,3 +48,43 @@ export const MunicipiosOeste: IObjectLiteral = {
   ["/villanueva-canada"]: "Villanueva de la Cañada",
   ["/villaviciosa"]: "Villaviciosa de Odón",
 };
+
+export const MunicipiosSierraCentral: IObjectLiteral = {
+  ["/alpedrete"]: "Alpedrete",
+  ["/cercedilla"]: "Cercedilla",
+  ["/colmenarejo"]: "Colmenarejo",
+  ["/collado-mediano"]: "Collado Mediano",
+  ["/escorial"]: "El Escorial",
+  ["/guadarrama"]: "Guadarrama",
+  ["/manzanares"]: "Manzanares el Real",
+  ["/miraflores"]: "Miraflores de la Sierra",
+  ["/morazarzal"]: "Moralzarzal",
+  ["/soto"]: "Soto del Real",
+  ["/valdemorillo"]: "Valdemorillo",
+  ["/villanueva-pardillo"]: "Villanueva del Pardillo",
+};
+
+export const MunicipiosSudeste: IObjectLiteral = {
+  ["/ambite"]: "Ambite",
+  ["/anchuelo"]: "Anchuelo",
+  ["/campo-real"]: "Campo Real",
+  ["/colmenar-oreja"]: "Colmenar de Oreja",
+  ["/corpa"]: "Corpa",
+  ["/chinchon"]: "Chinchon",
+  ["/estremera"]: "Estremera",
+  ["/fuentiduena"]: "Fuentidueña de Tajo",
+  ["/loeches"]: "Loeches",
+  ["/morata"]: "Morata de Tajuña",
+  ["/nuevo-baztan"]: "Nuevo Baztán",
+  ["/olmeda"]: "Olmeda de las Fuentes",
+  ["/orusco"]: "Orusco de Tajuña",
+  ["/perales"]: "Perales de Tajuña",
+  ["/pezuela"]: "Pezuela de las Torres",
+  ["/pozuelo"]: "Pozuelo del Rey",
+  ["/santos"]: "Santos de la Humosa",
+  ["/torres"]: "Torres de la Alameda",
+  ["/santorcaz"]: "Santorcaz",
+  ["/valverde"]: "Valverde de Alcalá",
+  ["/villalbilla"]: "Villalbilla",
+  ["/villar"]: "Villar del Olmo",
+};

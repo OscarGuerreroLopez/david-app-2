@@ -1,8 +1,8 @@
 import React from "react";
-import { Flex, Text, Image, Link } from "rebass";
+import { Flex, Text } from "rebass";
 import { useThemeUI } from "theme-ui";
 // import logoDark from "./images/logoDark.png";
-import logo from "./images/logoDark.png";
+// import logo from "./images/logoDark.png";
 // import logoLight from "./images/logoLight.png";
 // import { CustomCard } from "../../components/customCard";
 
@@ -36,7 +36,6 @@ export const MobileBanner: React.FC<IProps> = ({ town }) => {
                   fontSize: [2, 4, 4, 5, 5],
                   textAlign: "center",
                   width: ["100%"],
-                  // color: "#F99173",
                 }}
               >
                 En {town} y alrededores

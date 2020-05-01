@@ -10,7 +10,6 @@ import { IndexServices } from "./indexServices";
 import { IndexBrands } from "./brandsIntro";
 import { ContactMini } from "./contactMini";
 import { MobileBanner } from "./mobileBanner";
-import { Banner } from "./banner";
 import { GetPageInfo } from "../../utils/getPageInfo";
 import { LocationContext } from "../../utils/locationContext";
 
@@ -18,9 +17,6 @@ import garage from "./images/garage_door_med.jpg";
 // import rapeco from "./images/rapeco.png";
 import budget from "./images/budget.png";
 import allBrands from "./images/allBrands.png";
-import logoLight from "./images/logoLight.png";
-import logoDark from "./images/logoDark.png";
-import banner from "./images/banner.png";
 
 interface IProps extends RouteComponentProps {}
 

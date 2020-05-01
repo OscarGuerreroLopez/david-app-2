@@ -20,6 +20,8 @@ const Router = () => {
   const municipiosNordEste = Object.keys(routes.MunicipiosNordEste);
   const municipiosNorte = Object.keys(routes.MunicipiosNorte);
   const municipiosOeste = Object.keys(routes.MunicipiosOeste);
+  const municipiosSierraCentral = Object.keys(routes.MunicipiosSierraCentral);
+  const municipiosSudeste = Object.keys(routes.MunicipiosSudeste);
 
   return (
     <BrowserRouter>
@@ -37,6 +39,8 @@ const Router = () => {
           <Route path={municipiosNordEste} exact component={Home} />
           <Route path={municipiosNorte} exact component={Home} />
           <Route path={municipiosOeste} exact component={Home} />
+          <Route path={municipiosSierraCentral} exact component={Home} />
+          <Route path={municipiosSudeste} exact component={Home} />
 
           <Route component={Home} />
         </Switch>

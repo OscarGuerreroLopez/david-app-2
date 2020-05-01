@@ -17,5 +17,13 @@ export const GetPageInfo = (route: string): string => {
     return routes.MunicipiosOeste[route];
   }
 
+  if (routes.MunicipiosSierraCentral[route]) {
+    return routes.MunicipiosSierraCentral[route];
+  }
+
+  if (routes.MunicipiosSudeste[route]) {
+    return routes.MunicipiosSudeste[route];
+  }
+
   return "";
 };
