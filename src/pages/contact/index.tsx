@@ -83,10 +83,10 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
               </Text>
               <Text p={1} fontSize={[4, 4, 4, 5, 5, 6, 6]} textAlign="center">
                 <Link
-                  href="tel:+34-622-450-008"
+                  href="tel:+34-606-33-32-72"
                   sx={{ textDecoration: "none", color: "primary " }}
                 >
-                  <Text>622 333 111</Text>
+                  <Text>606 33 32 72</Text>
                 </Link>
               </Text>
               <br />
