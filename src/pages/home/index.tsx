@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { Flex, Image, Card } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import ReactGA from "react-ga";
 
 // import { useThemeUI } from "theme-ui";
 
@@ -26,6 +27,8 @@ const Home = withRouter(
     // const { colorMode } = context;
 
     const { location, setLocation } = useContext(LocationContext);
+
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     useEffect(() => {
       window.scrollTo(0, 0);
