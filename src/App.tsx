@@ -1,4 +1,6 @@
 import React, { useMemo, useState } from "react";
+import ReactGA from "react-ga";
+
 import { ThemeProvider } from "theme-ui";
 import { theme } from "./styles";
 import {
@@ -12,6 +14,8 @@ import Router from "./router";
 
 function App() {
   const [location, setLocation] = useState<ILocation>(initialLocation);
+
+  ReactGA.initialize("UA-166613782-1");
 
   const providerLocationValue: ILocationProvider = useMemo(
     () => ({ location, setLocation }),
