@@ -8,11 +8,7 @@ import automatismo2 from "./images/automatismos2.jpg";
 import automatismo3 from "./images/automatismos3.jpeg";
 import automatismo4 from "./images/automatismos4.jpg";
 import automatismo5 from "./images/automatismos5.jpg";
-import locksmith1 from "./images/locksmith1.jpg";
-import locksmith3 from "./images/locksmith3.jpeg";
-import locksmith4 from "./images/locksmith4.jpeg";
 
-import lock_1 from "./images/lock_1.jpg";
 import { CustomCard } from "../../components/customCard";
 import { MetaTags } from "../../components/metaTags";
 interface IProps {}
@@ -82,22 +78,6 @@ const Gallery: React.FC<IProps> = (): JSX.Element => {
           <Item imageName={automatismo3} />
           <Item imageName={automatismo4} />
           <Item imageName={automatismo5} />
-        </Flex>
-
-        <Flex flexWrap="wrap" pt="4" width="100%" justifyContent="center">
-          <Text
-            fontSize={[3, 3, 4, 4, 4, 5, 5]}
-            fontWeight="bold"
-            textAlign="center"
-            width="100%"
-          >
-            Cerrajeria:
-          </Text>
-          <Item imageName={lock_1} />
-          <Item imageName={locksmith1} />
-          {/* <Item imageName={locksmith2} /> */}
-          <Item imageName={locksmith3} />
-          <Item imageName={locksmith4} />
         </Flex>
       </Flex>
     </>

@@ -3,9 +3,6 @@ import { Flex, Text } from "rebass";
 import { useThemeUI } from "theme-ui";
 import { v4 as uuidv4 } from "uuid";
 
-export interface IObjectLiteral {
-  [key: string]: string;
-}
 interface IProps {
   linksObject: IObjectLiteral;
   onClick: (link: string) => void;

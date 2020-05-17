@@ -13,10 +13,6 @@ import dark from "./images/logo8.png";
 import { useThemeUI } from "theme-ui";
 import { LocationContext } from "../../utils/locationContext";
 
-export interface IObjectLiteral {
-  [key: string]: string;
-}
-
 interface IProps extends RouteComponentProps {}
 
 const Nav = withRouter(({ history, ...props }: IProps) => {

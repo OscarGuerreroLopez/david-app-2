@@ -11,11 +11,6 @@ import gate1 from "./images/gate1.jpg";
 import remote from "./images/remote.png";
 import repairs from "./images/repairs.png";
 import maintenance from "./images/maintenance.png";
-// import lock from "./images/lock.jpg";
-import aperturas from "./images/aperturas.png";
-import cerrajeria from "./images/cerrajeria.png";
-import reparaciones from "./images/reparaciones.png";
-import locksmith from "./images/residential-locksmith.jpg";
 
 interface IProps {}
 
@@ -155,119 +150,6 @@ const Services: React.FC<IProps> = (): JSX.Element => {
           </Flex>
         </Flex>
 
-        <Flex flexWrap="wrap" pt="4">
-          <Flex width={["100%", "100%", "100%", "100%", "100%", "70%", "70%"]}>
-            <CustomCard>
-              <Content
-                title={"Cerrajeria en general"}
-                content={
-                  "Ofrecemos servicios de cerrajería de urgencia con tarifas económicas y sin perder un ápice de calidad. DROS está especializado en atender todos los problemas de cerrajería que puedan surgir en su hogar.\
-                Realizamos apertura de puertas, cambio de cerrojos, reparación de cerraduras."
-                }
-              />
-            </CustomCard>
-          </Flex>
-          <Flex width={["100%", "100%", "100%", "100%", "100%", "30%", "30%"]}>
-            <Image
-              src={locksmith}
-              sx={{
-                width: ["100%"],
-                height: ["100%"],
-                filter: "grayscale(100%)",
-              }}
-              alt="Automatismos Dros"
-            />
-          </Flex>
-        </Flex>
-        <Flex flexWrap="wrap" pt="4" width={["100%"]}>
-          <Flex
-            width={["100%", "100%", "100%", "100%", "100%", "33.3%", "33.3%"]}
-            flexWrap="wrap"
-            pl={["", "0", "0", "0", "0", "2", "2"]}
-            pr={["", "0", "0", "0", "0", "2", "2"]}
-          >
-            <Flex width={["100%"]}>
-              <CustomCard>
-                <Flex justifyContent="center">
-                  <Image
-                    src={aperturas}
-                    sx={{
-                      width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
-                      height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
-                    }}
-                    alt="Automatismos Dros"
-                  />
-                </Flex>
-                <Content
-                  title={"Aperturas"}
-                  content={
-                    "Más de 30 años de experiencia nos permiten garantizarles un eficaz trabajo en nuestros servicios de cerrajería y apertura de todo tipo de puertas y persianas.\
-                  Prestamos servicios de apertura de puertas de comunidades, apertura de puertas de particulares, apertura de puertas de locales comerciales.\
-                  Atendemos a llamadas con urgencia, desplazándonos de forma rápida al lugar de la incidencia, y buscamos la mejor solución para resolver su problema intentando ocasionar el menor daño posible."
-                  }
-                />
-              </CustomCard>
-            </Flex>
-          </Flex>
-          <Flex
-            width={["100%", "100%", "100%", "100%", "100%", "33.3%", "33.3%"]}
-            flexWrap="wrap"
-            pl={["", "0", "0", "0", "0", "2", "2"]}
-            pr={["", "0", "0", "0", "0", "2", "2"]}
-            pt={["4", "4", "4", "4", "4", "0", "0"]}
-          >
-            <Flex width={["100%"]}>
-              <CustomCard>
-                <Flex justifyContent="center">
-                  <Image
-                    src={cerrajeria}
-                    sx={{
-                      width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
-                      height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
-                    }}
-                    alt="Cerrajería"
-                  />
-                </Flex>
-                <Content
-                  title={"Cerrajería"}
-                  content={
-                    "Dros, ofrece un eficaz servicio de cambio de cerraduras para emergencias. Somos rápidos y garantizamos todos nuestros trabajos, ya sean trabajos de urgencia como trabajos de cerrajería bajo presupuesto y a medida.\
-                  Cambio de cerraduras, reposición de bombillos, instalación de cerraduras nuevas, son alguno de nuestros trabajos. DROS, está especializado en todo tipo de cerraduras."
-                  }
-                />
-              </CustomCard>
-            </Flex>
-          </Flex>
-          <Flex
-            width={["100%", "100%", "100%", "100%", "100%", "33.3%", "33.3%"]}
-            flexWrap="wrap"
-            pl={["", "0", "0", "0", "0", "2", "2"]}
-            pr={["", "0", "0", "0", "0", "2", "2"]}
-            pt={["4", "4", "4", "4", "4", "0", "0"]}
-          >
-            <Flex width={["100%"]}>
-              <CustomCard>
-                <Flex justifyContent="center">
-                  <Image
-                    src={reparaciones}
-                    sx={{
-                      width: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
-                      height: ["20%", "20%", "20%", "20%", "20%", "20%", "20%"],
-                    }}
-                    alt="Automatismos Dros"
-                  />
-                </Flex>
-                <Content
-                  title={"Reparaciones"}
-                  content={
-                    "DROS se ha especializado en la reparación de puertas, realizando trabajos de carpintería metálica en general\
-                  Nuestro equipo de profesionales trabaja de forma limpia y sin provocar roturas o daños."
-                  }
-                />
-              </CustomCard>
-            </Flex>
-          </Flex>
-        </Flex>
         {/* <Image
         src={locksmith}
         sx={{

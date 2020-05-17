@@ -21,7 +21,7 @@ export const IndexAboutUs: React.FC<IProps> = ({
       <CustomCard>
         <Content
           title={"Quienes somos"}
-          content={`Con más de 25 años a su servicio, DROS es una empresa consolidada, compuesta por un equipo de profesionales competentes con una amplia experiencia personal en el mundo del automatismo, dando tambien servicios de Cerrajeria Rápida a comunidades, empresas y particulares ${extraText}.`}
+          content={`Con más de 25 años a su servicio, DROS es una empresa consolidada, compuesta por un equipo de profesionales competentes con una amplia experiencia personal en el mundo del automatismo y puertas automáticas de garaje a comunidades, empresas y particulares ${extraText}.`}
         />
 
         <Flex>

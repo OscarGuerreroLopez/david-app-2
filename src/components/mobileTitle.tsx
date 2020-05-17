@@ -14,7 +14,7 @@ export const MobileTitle: React.FC = (): JSX.Element => {
         },
       }}
     >
-      Automatismos y cerrajeria Dros
+      Puertas automáticas de garaje Dros
     </Text>
   );
 };

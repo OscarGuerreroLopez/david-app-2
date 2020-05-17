@@ -18,7 +18,7 @@ export const IndexServices: React.FC<IProps> = ({ onClick, town }) => {
         <Content
           title={"Nuestros servicios"}
           content={`En Dros estamos especializados en instalaciones y reparaciones de \
-              todo tipo cerrajeria y automatismos para \
+              todo tipo de puertas automáticas de garaje y automatismos para \
                clientes particulares, comunidades de vecinos y empresas ${extraText}\
             `}
         />

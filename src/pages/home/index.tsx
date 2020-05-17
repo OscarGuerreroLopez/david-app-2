@@ -11,6 +11,7 @@ import { ContactMini } from "./contactMini";
 import { MobileBanner } from "./mobileBanner";
 import { GetPageInfo } from "../../utils/getPageInfo";
 import { LocationContext } from "../../utils/locationContext";
+import { Locations } from "./locations";
 
 import garage from "./images/garage_door_med.jpg";
 // import rapeco from "./images/rapeco.png";
@@ -248,6 +249,9 @@ const Home = withRouter(
               <ContactMini onClick={clickedMiniContact} />
             </Flex>
           </Flex>
+        </Flex>
+        <Flex p="4" width="100%">
+          <Locations />
         </Flex>
       </>
     );

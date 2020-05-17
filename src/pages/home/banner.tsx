@@ -50,7 +50,7 @@ export const Banner: React.FC<IProps> = ({ town }) => {
           sx={{
             borderRadius: 8,
           }}
-          alt="Automatismos y cerrajeria Dros"
+          alt="Puertas automáticas de garaje Dros"
         />
       </Flex>
       <Flex

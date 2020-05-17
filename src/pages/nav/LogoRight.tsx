@@ -71,7 +71,7 @@ export const LogoRight: React.FC<IProps> = ({
             fontFamily: "chewy",
           }}
         >
-          Automatismos y cerrajeria DROS
+          Puertas automáticas de garaje Dros
         </Text>
       </Box>
     </Flex>

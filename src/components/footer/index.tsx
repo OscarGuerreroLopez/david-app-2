@@ -107,13 +107,10 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
         >
           <Box fontSize={[3, 3, 3, 3, 3, 2, 2]} width={[1]}>
             <Flex width={[1]} justifyContent="center">
-              <Text>Automatismos y cerrajeria Dros</Text>
+              <Text>Puertas automáticas de garaje Dros</Text>
             </Flex>
             <Flex width={[1]} justifyContent="center">
               <Text>Automatismos</Text>
-            </Flex>
-            <Flex width={[1]} justifyContent="center">
-              <Text>Cerrajeria</Text>
             </Flex>
             <Flex width={[1]} justifyContent="center">
               <Text>Aperturas de urgencia</Text>
@@ -132,9 +129,6 @@ const Footer: React.FC<IProps> = (): JSX.Element => {
             </Flex>
             <Flex width={[1]} justifyContent="center">
               <Text>Instalacion motores</Text>
-            </Flex>
-            <Flex width={[1]} justifyContent="center">
-              <Text>Cambio bombillo</Text>
             </Flex>
           </Box>
         </Flex>

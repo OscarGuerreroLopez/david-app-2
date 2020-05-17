@@ -11,15 +11,15 @@ export const MetaTags: React.FC<IProps> = (): JSX.Element => {
 
   return (
     <Helmet>
-      <title>Automatismos y cerrajeria en {location.town || "Madrid"}</title>
+      <title>Automatismos en {location.town || "Madrid"}</title>
       <meta
         name="description"
         content={`Automatismos y Cerrajería en ${
           location.town || "Madrid"
-        }. Telf: 606 33 32 72. Reparación puerta garage. Cerrajero urgente. Arreglo puerta corredera. Puertas automáticas.`}
+        }. Telf: 606 33 32 72. Reparación puerta garage. Automatismos. Arreglo puerta corredera. Puertas automáticas.`}
       />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://david-app-2.now.sh/" />
+      <link rel="canonical" href="https://automatismosdros.com/" />
     </Helmet>
   );
 };
