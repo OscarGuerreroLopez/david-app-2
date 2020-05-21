@@ -18,7 +18,6 @@ export const Locations: React.FC<IProps> = ({ onClick }): JSX.Element => {
   useEffect(() => {
     const getTownValues = async () => {
       const townNames = await GetTownNames();
-      console.log("111111", townNames);
 
       setTowns(townNames);
     };
@@ -28,7 +27,7 @@ export const Locations: React.FC<IProps> = ({ onClick }): JSX.Element => {
 
   const handleChange = (selectedOption: any) => {
     setSelectedOption({ ...selectedOption });
-    console.log(`Option selected:`, selectedOption);
+
     onClick(selectedOption.value);
   };
 

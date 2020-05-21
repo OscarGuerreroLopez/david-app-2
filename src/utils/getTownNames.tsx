@@ -14,8 +14,6 @@ export const GetTownNames = async () => {
   try {
     locationInfo = await stripTown(towns);
 
-    console.log("@@@@@", locationInfo);
-
     return locationInfo;
   } catch (error) {
     console.log("error", error);
