@@ -11,10 +11,12 @@ export const MetaTags: React.FC<IProps> = (): JSX.Element => {
 
   return (
     <Helmet>
-      <title>Automatismos en {location.town || "Madrid"}</title>
+      <title>
+        Puertas automáticas y puertas de garaje en {location.town || "Madrid"}
+      </title>
       <meta
         name="description"
-        content={`Automatismos y Cerrajería en ${
+        content={`Puertas automáticas y puertas de garaje en ${
           location.town || "Madrid"
         }. Telf: 606 33 32 72. Reparación puerta garage. Automatismos. Arreglo puerta corredera. Puertas automáticas.`}
       />

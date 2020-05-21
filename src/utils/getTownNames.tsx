@@ -5,17 +5,18 @@ export const GetTownNames = async () => {
 
   const areas: IObjectLiteral2 = routes;
 
-  let joder: IObjectLiteral2[];
+  let locationInfo: IObjectLiteral2[];
 
   const towns = municipios.map((area: any) => {
     return areas[area];
   });
 
   try {
-    joder = await stripTown(towns);
-    console.log("11111", joder);
+    locationInfo = await stripTown(towns);
 
-    return joder;
+    console.log("@@@@@", locationInfo);
+
+    return locationInfo;
   } catch (error) {
     console.log("error", error);
   }
@@ -26,14 +27,13 @@ const stripTown = (towns: any[]): Promise<any> => {
 
   return new Promise((resolve) => {
     towns.forEach((town: any, index: number) => {
-      console.log("2222", town);
       Object.keys(town).forEach((name: string, index: number) => {
-        console.log("3333", name, town[name]);
-        allTowns = { ...allTowns, ...town };
+        allTowns = {
+          ...allTowns,
+          ...{ [`${name}`]: `Automatismos en ${town[name]}` },
+        };
       });
     });
-    console.log("44444", allTowns);
-    console.log("55555", Object.keys(allTowns).length);
 
     resolve(allTowns);
   });

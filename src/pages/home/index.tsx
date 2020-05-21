@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { Flex, Image, Card, Box, Text } from "rebass";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { useThemeUI } from "theme-ui";
+import ReactGA from "react-ga";
 
 import { MetaTags } from "../../components/metaTags";
 import { IndexAboutUs } from "./indexAboutUs";
@@ -20,6 +21,8 @@ import allBrands from "./images/allBrands.png";
 
 interface IProps extends RouteComponentProps {}
 
+ReactGA.initialize("UA-166613782-1");
+
 const Home = withRouter(
   ({ history, match, ...props }: IProps): JSX.Element => {
     const context = useThemeUI();
@@ -35,6 +38,10 @@ const Home = withRouter(
       setLocation({ path, town });
     }, [match.path, setLocation]);
 
+    useEffect(() => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+
     const clickedIndexService = () => {
       history.push("/services");
     };
@@ -45,6 +52,10 @@ const Home = withRouter(
 
     const clickedMiniContact = () => {
       history.push("/contact");
+    };
+
+    const clickedLocation = (location: string) => {
+      history.push(location);
     };
 
     return (
@@ -250,8 +261,8 @@ const Home = withRouter(
             </Flex>
           </Flex>
         </Flex>
-        <Flex p="4" width="100%">
-          <Locations />
+        <Flex p="4" width="100%" justifyContent="center">
+          <Locations onClick={clickedLocation} />
         </Flex>
       </>
     );

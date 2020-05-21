@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Flex, Image } from "rebass";
-// import axios from "axios";
-// import { find as _find } from "lodash";
+import ReactGA from "react-ga";
+
 import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";
 import { MetaTags } from "../../components/metaTags";
@@ -17,6 +17,7 @@ interface IProps {}
 const Services: React.FC<IProps> = (): JSX.Element => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (

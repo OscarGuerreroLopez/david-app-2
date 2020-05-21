@@ -3,27 +3,22 @@ import { GetTownNames } from "../../utils/getTownNames";
 
 import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";
-import { Label } from "@rebass/forms";
-import { Box } from "rebass";
+import { Box, Flex } from "rebass";
 import Select from "react-select";
 
-interface IProps {}
+interface IProps {
+  onClick: (location: string) => void;
+}
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
-export const Locations: React.FC<IProps> = (): JSX.Element => {
+export const Locations: React.FC<IProps> = ({ onClick }): JSX.Element => {
   const [towns, setTowns] = useState<any>();
 
-  const [selectedOption, setSelectedOption] = useState("Madrid");
+  const [selectedOption, setSelectedOption] = useState(null);
 
   useEffect(() => {
     const getTownValues = async () => {
       const townNames = await GetTownNames();
-      console.log("66666", townNames);
+      console.log("111111", townNames);
 
       setTowns(townNames);
     };
@@ -34,30 +29,36 @@ export const Locations: React.FC<IProps> = (): JSX.Element => {
   const handleChange = (selectedOption: any) => {
     setSelectedOption({ ...selectedOption });
     console.log(`Option selected:`, selectedOption);
+    onClick(selectedOption.value);
   };
 
   return (
     <>
-      {/* <CustomCard>
-        {towns &&
-          Object.keys(towns).map((town: any, index: number) => {
-            return <Content content={towns[town]} key={index} />;
-          })}
-      </CustomCard> */}
-      <Box>
-        <CustomCard>
+      <Flex
+        justifyContent="center"
+        width={["90%", "90%", "90%", "80%", "80%", "80%", "80%", "80%"]}
+      >
+        <CustomCard width="100%">
           {towns && (
-            <Box>
-              <Select
-                options={Object.keys(towns).map((town) => {
-                  return { value: town, label: towns[town] };
-                })}
-                onChange={handleChange}
-              />
-            </Box>
+            <>
+              <Content title={"Localidades en las que damos servicio"} />
+              <Box width="100%">
+                <Select
+                  placeholder="Madrid"
+                  value={selectedOption}
+                  options={Object.keys(towns)
+                    .sort()
+                    .map((town) => {
+                      return { value: town, label: towns[town] };
+                    })}
+                  onChange={handleChange}
+                  isSearchable={false}
+                />
+              </Box>
+            </>
           )}
         </CustomCard>
-      </Box>
+      </Flex>
     </>
   );
 };
