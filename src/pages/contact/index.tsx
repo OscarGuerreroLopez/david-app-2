@@ -1,11 +1,10 @@
 import React, { useEffect, useContext } from "react";
 import { Flex, Image, Text, Link } from "rebass";
-import { Helmet } from "react-helmet";
 
 import { CustomCard } from "../../components/customCard";
 import { LocationContext } from "../../utils/locationContext";
-
-// import { Content } from "../../components/cardContent";
+import { MetaTags } from "../../components/metaTags";
+import { ReactGa } from "../../utils/reactGa";
 
 import whatsapp from "./whatsapp.png";
 
@@ -15,6 +14,7 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGa(window.location.pathname + window.location.search);
   }, []);
 
   const number = "34606333272";
@@ -22,19 +22,8 @@ const Contact: React.FC<IProps> = (): JSX.Element => {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Automatismos y puertas automáticas de garaje en{" "}
-          {location.town || "Madrid"}
-        </title>
-        <meta
-          name="description"
-          content={`Automatismos y Cerrajería en ${
-            location.town || "Madrid"
-          }. Telf: 606 33 32 72. Reparación puerta garage. Automatismos. Arreglo puerta corredera. Puertas automáticas.`}
-        />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      <MetaTags />
+
       <Flex
         justifyContent="flex-start"
         flexWrap="wrap"

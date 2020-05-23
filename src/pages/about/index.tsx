@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Flex, Image, Box } from "rebass";
-import ReactGA from "react-ga";
 
 import { CustomCard } from "../../components/customCard";
 import { Content } from "../../components/cardContent";
@@ -9,15 +8,14 @@ import { MetaTags } from "../../components/metaTags";
 import garage from "./images/garage_door_small.jpg";
 import speed from "./images/speed.png";
 import quality from "./images/quality.png";
+import { ReactGa } from "../../utils/reactGa";
 
 interface IProps {}
-
-ReactGA.initialize("UA-166613782-1");
 
 const About: React.FC<IProps> = (): JSX.Element => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGa(window.location.pathname + window.location.search);
   }, []);
 
   return (
