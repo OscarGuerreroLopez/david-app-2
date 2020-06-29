@@ -127,7 +127,7 @@ const Home = withRouter(
                   textAlign: "center",
                 }}
               >
-                Telf: 606 33 32 72
+                Telf: 695 995 969
               </Text>
             </Flex>
             <Flex
@@ -154,7 +154,7 @@ const Home = withRouter(
                   textAlign: "center",
                 }}
               >
-                Telf: 606 33 32 72
+                Telf: 695 995 969
               </Text>
             </Flex>
             {/* <Image

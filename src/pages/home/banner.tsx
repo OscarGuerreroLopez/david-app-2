@@ -70,10 +70,10 @@ export const Banner: React.FC<IProps> = ({ town }) => {
           }}
         >
           <Link
-            href="tel:+34-606-33-32-72"
+            href="tel:695-99-59-69"
             sx={{ textDecoration: "none", color: "primary " }}
           >
-            Telf: 606 33 32 72
+            Telf: 695 995 969
           </Link>
         </Text>
       </Flex>

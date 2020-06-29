@@ -42,7 +42,7 @@ export const Icons: React.FC<IProps> = () => {
       </Box>
       <Box p={3} width={1} color="#3383FF">
         <Card>
-          <Link href="tel:+34-606-33-32-72">
+          <Link href="tel:695-99-59-69">
             <Image
               src={Calling}
               sx={{

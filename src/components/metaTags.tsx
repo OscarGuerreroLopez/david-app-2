@@ -18,7 +18,7 @@ export const MetaTags: React.FC<IProps> = (): JSX.Element => {
         name="description"
         content={`Puertas automáticas y puertas de garaje en ${
           location.town || "Madrid"
-        }. Telf: 606 33 32 72. Reparación puerta garage. Automatismos. Arreglo puerta corredera. Puertas automáticas.`}
+        }. Telf: 695 995 969. Reparación puerta garage. Automatismos. Arreglo puerta corredera. Puertas automáticas.`}
       />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://automatismosdros.com/" />
